@@ -3,7 +3,7 @@
 
 <suite name="Suite">
 
-    <test name="broschüreBestellen">
+    <test name="smartRegressionTests">
         <classes>
             <class name="Tests.ST_CAN_DLR_FND_AnonymousUserSearchesForDealerWithDirections_Test"/>
         </classes>
