@@ -22,17 +22,17 @@ public class ST_CAN_REQ_CRE_AnonymousUserOrdersBrochure_Test extends BaseTest{
 
     /**
      * This test is:
-     * opens (order brochure) via URL
+     * opens "Broschüre bestellen" (order brochure) via URL
      * checks url
      * closes psyma PopUp
      * checks that all mandatory fields are marked with a star
      */
     @Test
-    public void testBroschüreBestellen() {
-        driver.get(UrlOfPages.broschüre_bestellen);
+    public void testBroschureOrderViaURL() {
+        driver.get(UrlOfPages.brochureOrder2);
 
         String broschüreBestellenURL = st_can_req_cre_anonymousUserOrdersBrochure_page.getAssertUrl();
-        Assert.assertEquals(broschüreBestellenURL, UrlOfPages.broschüre_bestellen);
+        Assert.assertEquals(broschüreBestellenURL, UrlOfPages.brochureOrder2);
 
         indexPage.psymaPopUpClose();
 
@@ -49,6 +49,7 @@ public class ST_CAN_REQ_CRE_AnonymousUserOrdersBrochure_Test extends BaseTest{
         st_can_req_cre_anonymousUserOrdersBrochure_page.perTelefonCheck();
         st_can_req_cre_anonymousUserOrdersBrochure_page.perElektronischerPostCheck();
         st_can_req_cre_anonymousUserOrdersBrochure_page.perPostCheck();
+
     }
 
     /**
@@ -62,7 +63,7 @@ public class ST_CAN_REQ_CRE_AnonymousUserOrdersBrochure_Test extends BaseTest{
      * checks that all mandatory fields are marked with a star
      */
     @Test
-    public void testSelectBroschüreBestellenFromSideNavigator() {
+    public void testSelectBroschureOrderFromSideNavigator() {
         driver.get(UrlOfPages.indexPage);
 
         String indexPageURL = indexPage.getAssertUrl();
@@ -73,7 +74,7 @@ public class ST_CAN_REQ_CRE_AnonymousUserOrdersBrochure_Test extends BaseTest{
         indexPage.brochureOrderClick();
 
         String brochureOrderURL = indexPage.getAssertUrl();
-        Assert.assertEquals(brochureOrderURL, UrlOfPages.brochureOrder);
+        Assert.assertEquals(brochureOrderURL, UrlOfPages.brochureOrder1);
 
         indexPage.psymaPopUpClose();
 
@@ -86,6 +87,7 @@ public class ST_CAN_REQ_CRE_AnonymousUserOrdersBrochure_Test extends BaseTest{
         st_can_req_cre_anonymousUserOrdersBrochure_page.wohnortCheck();
         st_can_req_cre_anonymousUserOrdersBrochure_page.emailCheck();
         st_can_req_cre_anonymousUserOrdersBrochure_page.informationsmaterialCheck();
+        //??? not acceptUsingPersonalData() without accept
         st_can_req_cre_anonymousUserOrdersBrochure_page.perTelefonCheck();
         st_can_req_cre_anonymousUserOrdersBrochure_page.perElektronischerPostCheck();
         st_can_req_cre_anonymousUserOrdersBrochure_page.perPostCheck();
@@ -102,7 +104,7 @@ public class ST_CAN_REQ_CRE_AnonymousUserOrdersBrochure_Test extends BaseTest{
      * fills Form and send it (hard coded)
      */
     @Test
-    public void testSelectBroschüreAndFillForm() {
+    public void testSelectBroschureOrderAndFillForm() {
         driver.get(UrlOfPages.indexPage);
 
         String indexPageURL = indexPage.getAssertUrl();
@@ -113,7 +115,7 @@ public class ST_CAN_REQ_CRE_AnonymousUserOrdersBrochure_Test extends BaseTest{
         indexPage.brochureOrderClick();
 
         String brochureOrderURL = indexPage.getAssertUrl();
-        Assert.assertEquals(brochureOrderURL, UrlOfPages.brochureOrder);
+        Assert.assertEquals(brochureOrderURL, UrlOfPages.brochureOrder1);
 
         indexPage.psymaPopUpClose();
 
