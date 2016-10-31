@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite">
+
+    <test name="broschüreBestellen">
+        <classes>
+            <class name="Tests.ST_CAN_DLR_FND_AnonymousUserSearchesForDealerWithDirections_Test"/>
+            <class name="Tests.ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccountTest"/>
+            <class name="Tests.ST_CLI_ACC_OUT_LoggedInUserLogsOutViaConnectMenu_Test"/>
+            <class name="Tests.ST_CAN_REQ_CRE_AnonymousUserOrdersBrochure_Test"/>
+        </classes>
+    </test>
+
+</suite>
