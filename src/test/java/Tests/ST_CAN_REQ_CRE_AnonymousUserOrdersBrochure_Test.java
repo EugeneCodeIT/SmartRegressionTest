@@ -45,7 +45,7 @@ public class ST_CAN_REQ_CRE_AnonymousUserOrdersBrochure_Test extends BaseTest{
         test.log(LogStatus.INFO, "Broschüre bestellen page is opened");
 
 
-        indexPage.psymaPopUpClose();
+        //indexPage.psymaPopUpClose();
 
         st_can_req_cre_anonymousUserOrdersBrochure_page.bodyCheck();
         test.log(LogStatus.INFO, "Feedback form is Visible");
@@ -115,7 +115,7 @@ public class ST_CAN_REQ_CRE_AnonymousUserOrdersBrochure_Test extends BaseTest{
         Assert.assertEquals(brochureOrderURL, UrlOfPages.brochureOrder);
         test.log(LogStatus.INFO, "Brochure Order Page page is opened");
 
-        indexPage.psymaPopUpClose();
+        //indexPage.psymaPopUpClose();
 
         st_can_req_cre_anonymousUserOrdersBrochure_page.adresstypCheck();
         test.log(LogStatus.INFO, "Adresstyp field is marked with asteriks");
@@ -182,7 +182,7 @@ public class ST_CAN_REQ_CRE_AnonymousUserOrdersBrochure_Test extends BaseTest{
         Assert.assertEquals(brochureOrderURL, UrlOfPages.brochureOrder);
         test.log(LogStatus.INFO, "Brochure Order page is opened");
 
-        indexPage.psymaPopUpClose();
+        //indexPage.psymaPopUpClose();
 
         indexPage.adresstypSelectCheckBox();
         indexPage.anredeDropListSelect();

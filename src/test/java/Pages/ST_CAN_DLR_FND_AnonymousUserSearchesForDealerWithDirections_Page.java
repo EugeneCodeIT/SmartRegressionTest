@@ -65,7 +65,8 @@ public class ST_CAN_DLR_FND_AnonymousUserSearchesForDealerWithDirections_Page ex
         inputUserAddressField.sendKeys(address);
     }
 
-    public void infoContentList(){
+    public void infoContentList() throws InterruptedException {
+        Thread.sleep(3000);
         try{
             waitVisibilityOfElement(infoContentList);
             infoContentList.isDisplayed();
@@ -91,16 +92,11 @@ public class ST_CAN_DLR_FND_AnonymousUserSearchesForDealerWithDirections_Page ex
             }
 
         }
-        try{
-            waitVisibilityOfElement(directionsPanel);
-        }catch (NoSuchElementException e){
-            System.out.println("Directions panel doesn't display");
-        }
-
+        waitVisibilityOfElement(directionsPanel);
     }
 
     public void directionTable() throws InterruptedException {
-        Thread.sleep(1000);
+        Thread.sleep(3000);
         try{
             directionsTable.isDisplayed();
         }catch (NoSuchElementException e){
@@ -109,4 +105,17 @@ public class ST_CAN_DLR_FND_AnonymousUserSearchesForDealerWithDirections_Page ex
 
     }
 
+    public int countOfDialers(){
+
+        List<WebElement> optionCount = driver.findElements(By.xpath("//div[@class='row infocontent']/a"));
+        optionCount.size();
+        return optionCount.size();
+    }
+
+    public int random(){
+        Random rand = new Random();
+        int n =rand.nextInt();
+        return n;
+
+    }
 }

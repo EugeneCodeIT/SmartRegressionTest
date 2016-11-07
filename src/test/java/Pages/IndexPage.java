@@ -1,6 +1,7 @@
 package Pages;
 
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -81,6 +82,9 @@ public class IndexPage extends BasePage {
 
     @FindBy(xpath = ".//*[@id='ciam-weblogin-auth-login-button']")
     private WebElement anmelden;
+
+    @FindBy(xpath = "//span[contains(.,'TEST')]")
+    private WebElement userName;
 
     public IndexPage(WebDriver driver) {
         super(driver);
@@ -196,7 +200,11 @@ public class IndexPage extends BasePage {
         moveToElement(connectButton);
     }
 
-    public String getUserName(){
+    public String getUserName() throws InterruptedException {
+        try{
+            waitOfElement(userName);
+        }catch (TimeoutException e){
+        }
         return connectButton.getText();
     }
 
