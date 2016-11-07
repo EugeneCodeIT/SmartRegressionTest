@@ -48,7 +48,7 @@ public class ST_CLI_ACC_OUT_LoggedInUserLogsOutViaConnectMenu_Test extends BaseT
         test.log(LogStatus.INFO, "Index page is opened");
 
         indexPage.closeCookiesPopUp();
-        indexPage.psymaPopUpClose();
+        //indexPage.psymaPopUpClose();
         indexPage.connectbuttonClick();
         test.log(LogStatus.INFO, "Connect frame is opened");
 
@@ -73,7 +73,4 @@ public class ST_CLI_ACC_OUT_LoggedInUserLogsOutViaConnectMenu_Test extends BaseT
         Assert.assertEquals(connectButtonName, "Connect");
         test.log(LogStatus.INFO, "User is logged out successfully");
     }
-
-
-
 }

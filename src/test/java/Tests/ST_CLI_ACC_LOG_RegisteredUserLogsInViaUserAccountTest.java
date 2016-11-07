@@ -56,7 +56,7 @@ public class ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccountTest extends BaseT
         test.log(LogStatus.INFO, "Index page is opened");
 
         indexPage.closeCookiesPopUp();
-        indexPage.psymaPopUpClose();
+        //indexPage.psymaPopUpClose();
         indexPage.connectbuttonClick();
         st_cli_acc_log_RegisteredUserLogsInViaUserAccount_page.switchToFrame();
         test.log(LogStatus.INFO, "Connect frame is opened");

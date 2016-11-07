@@ -9,9 +9,6 @@ import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.*;
 
-/**
- * Created by QA on 27.10.2016.
- */
 public class ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccount_Page extends BasePage {
 
     @FindBy(xpath = ".//*[@id='name']")
@@ -43,6 +40,9 @@ public class ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccount_Page extends Base
 
     @FindBy(xpath = ".//*[@id='captcha_input']")
     private WebElement captchaField;
+
+    @FindBy(xpath = ".//*[@id='framelogin']")
+    private WebElement frame;
 
     public ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccount_Page(WebDriver driver) {
         super(driver);
@@ -82,7 +82,11 @@ public class ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccount_Page extends Base
     }
 
     public void switchToFrame(){
-        driver.switchTo().frame(driver.findElement(By.xpath(".//*[@id='framelogin']")));
+        try{
+            driver.switchTo().frame(driver.findElement(By.xpath(".//*[@id='framelogin']")));
+        }catch (WebDriverException e){
+            System.out.println("Frame is loading");
+        }
     }
 
     public void switchToWebPage(){
