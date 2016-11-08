@@ -7,4 +7,5 @@ public class UrlOfPages {
     public static String brochureOrder = "https://www.smart.com/de/de/index.html#?servicepage.id=brochure-order";
     public static String dealerLocator = "https://www.smart.com/de/de/index.html#?servicepage.id=dealer-locator";
     public static String hotmail = "http://hotmail.com";
+    public static String testHotmail = "http://hotmail.com";
 }
