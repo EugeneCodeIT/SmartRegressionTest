@@ -86,6 +86,18 @@ public class IndexPage extends BasePage {
     @FindBy(xpath = "//span[contains(.,'TEST')]")
     private WebElement userName;
 
+    @FindBy(xpath = "html/body/div[2]/header/div/div/div[3]/div[2]/ul/li[1]/div/a/span")
+    private WebElement smartFortwoButton;
+
+    @FindBy(xpath = "html/body/div[2]/header/div/div/div[3]/div[2]/ul/li[2]/div/a/span")
+    private WebElement smartFortwoCabrioButton;
+
+    @FindBy(xpath = "//a[@data-href='/de/de/index/servicepage-library/fortwo-configurator.html']")
+    private WebElement smartFortwoKonfiguratorButton;
+
+    @FindBy(xpath = "//a[@data-tracking-elementname='navigation:C-MODEL-FLYOUTS:smart fortwo cabrio:Konfigurator']")
+    private WebElement smartFortwoCabrioKonfiguratorButton;
+
     public IndexPage(WebDriver driver) {
         super(driver);
     }
@@ -197,10 +209,12 @@ public class IndexPage extends BasePage {
     }
 
     public void connectbuttonClick() throws InterruptedException {
+        Thread.sleep(2000);
         moveToElement(connectButton);
     }
 
     public String getUserName() throws InterruptedException {
+        Thread.sleep(2000);
         try{
             waitOfElement(userName);
         }catch (TimeoutException e){
@@ -210,6 +224,25 @@ public class IndexPage extends BasePage {
 
     public String getConnectButtonName(){
         return connectButton.getText();
+    }
+
+    public void smartFortwobuttonClick() {
+        moveToElement(smartFortwoButton);
+    }
+
+    public void smartFortwoCabrioButtonClick() throws InterruptedException {
+        Thread.sleep(2000);
+        moveToElement(smartFortwoCabrioButton);
+    }
+
+    public void konfiguratorButtonClick(){
+        waitVisibilityOfElement(smartFortwoKonfiguratorButton);
+        smartFortwoKonfiguratorButton.click();
+    }
+
+    public void smartFortwoCabrioKonfiguratorButtonClick(){
+        waitVisibilityOfElement(smartFortwoCabrioKonfiguratorButton);
+        smartFortwoCabrioKonfiguratorButton.click();
     }
 
 

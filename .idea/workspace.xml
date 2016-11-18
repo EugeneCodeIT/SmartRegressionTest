@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2885ad98-7e6a-4466-a717-d81f877ae5be" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/Pages/ST_CAN_CFG_RST_AnonymousUserConfiguresCarAndResetsConfiguration_Page.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/Tests/ST_CAN_CFG_RST_AnonymousUserConfiguresCarAndResetsConfiguration_Test.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyFile.png" afterPath="$PROJECT_DIR$/MyFile.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Constants/UrlOfPages.java" afterPath="$PROJECT_DIR$/src/test/java/Constants/UrlOfPages.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Pages/BasePage.java" afterPath="$PROJECT_DIR$/src/test/java/Pages/BasePage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Pages/IndexPage.java" afterPath="$PROJECT_DIR$/src/test/java/Pages/IndexPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Pages/ST_CAN_DLR_FND_AnonymousUserSearchesForDealerWithDirections_Page.java" afterPath="$PROJECT_DIR$/src/test/java/Pages/ST_CAN_DLR_FND_AnonymousUserSearchesForDealerWithDirections_Page.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Tests/ST_CAN_DLR_FND_AnonymousUserSearchesForDealerWithDirections_Test.java" afterPath="$PROJECT_DIR$/src/test/java/Tests/ST_CAN_DLR_FND_AnonymousUserSearchesForDealerWithDirections_Test.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/suite.xml" afterPath="$PROJECT_DIR$/src/test/resources/suite.xml" />
     </list>
     <ignored path="SmartRegressionTest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,6 +87,24 @@
                 <option name="myItemType" value="com.intellij.openapi.externalSystem.view.TasksNode$1" />
               </PATH_ELEMENT>
             </PATH>
+            <PATH>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ExternalProjectsStructure$RootNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="SmartRegressionTest" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ProjectNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="Tasks" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.TasksNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="build" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.TasksNode$1" />
+              </PATH_ELEMENT>
+            </PATH>
           </tree_state>
         </projects_view>
       </state>
@@ -85,44 +115,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccountTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Tests/ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccountTest.java">
+      <file leaf-file-name="ST_CAN_CFG_RST_AnonymousUserConfiguresCarAndResetsConfiguration_Test.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Tests/ST_CAN_CFG_RST_AnonymousUserConfiguresCarAndResetsConfiguration_Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1411">
-              <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+            <state relative-caret-position="-2533">
+              <caret line="28" column="61" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="61" />
               <folding>
-                <element signature="imports" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ST_CLI_ACC_OUT_LoggedInUserLogsOutViaConnectMenu_Test.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Tests/ST_CLI_ACC_OUT_LoggedInUserLogsOutViaConnectMenu_Test.java">
+      <file leaf-file-name="IndexPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Pages/IndexPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="52" column="60" selection-start-line="52" selection-start-column="60" selection-end-line="52" selection-end-column="60" />
+            <state relative-caret-position="252">
+              <caret line="212" column="37" selection-start-line="212" selection-start-column="37" selection-end-line="212" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HotmailPage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Pages/HotmailPage.java">
+      <file leaf-file-name="ExtentManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Context/ExtentManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyDriverFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Context/MyDriverFactory.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UrlOfPages.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Constants/UrlOfPages.java">
+      <file leaf-file-name="ST_CAN_CFG_RST_AnonymousUserConfiguresCarAndResetsConfiguration_Page.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Pages/ST_CAN_CFG_RST_AnonymousUserConfiguresCarAndResetsConfiguration_Page.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="294">
+              <caret line="136" column="5" selection-start-line="136" selection-start-column="5" selection-end-line="136" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -130,38 +172,18 @@
       <file leaf-file-name="ST_CAN_DLR_FND_AnonymousUserSearchesForDealerWithDirections_Test.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Tests/ST_CAN_DLR_FND_AnonymousUserSearchesForDealerWithDirections_Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1632">
-              <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+            <state relative-caret-position="334">
+              <caret line="93" column="93" selection-start-line="93" selection-start-column="93" selection-end-line="93" selection-end-column="93" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ST_CAN_REQ_CRE_AnonymousUserOrdersBrochure_Test.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Tests/ST_CAN_REQ_CRE_AnonymousUserOrdersBrochure_Test.java">
+      <file leaf-file-name="ST_CAN_REQ_CRE_AnonymousUserCreatesCONNECTAccountByEmail_Test.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Tests/ST_CAN_REQ_CRE_AnonymousUserCreatesCONNECTAccountByEmail_Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3332">
-              <caret line="203" column="1" selection-start-line="203" selection-start-column="1" selection-end-line="203" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccount_Page.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Pages/ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccount_Page.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2074">
-              <caret line="145" column="0" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Tests/BaseTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+            <state relative-caret-position="382">
+              <caret line="48" column="72" selection-start-line="48" selection-start-column="63" selection-end-line="48" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -170,24 +192,34 @@
       <file leaf-file-name="ST_CAN_DLR_FND_AnonymousUserSearchesForDealerWithDirections_Page.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Pages/ST_CAN_DLR_FND_AnonymousUserSearchesForDealerWithDirections_Page.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1853">
-              <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="201">
+              <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="60" />
+              <folding>
+                <element signature="e#2049#2050#0" expanded="true" />
+                <element signature="e#2085#2086#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ST_CAN_REQ_CRE_AnonymousUserOrdersBrochure_Page.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Pages/ST_CAN_REQ_CRE_AnonymousUserOrdersBrochure_Page.java">
+      <file leaf-file-name="ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccountTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Tests/ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccountTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2346">
-              <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+            <state relative-caret-position="1037">
+              <caret line="84" column="65" selection-start-line="84" selection-start-column="65" selection-end-line="84" selection-end-column="65" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -368,7 +400,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="2957191452140" />
+        <entry key="$PROJECT_DIR$" value="2958787271866" />
         <entry key="$PROJECT_DIR$/../testJava" value="2950980786000" />
         <entry key="$USER_HOME$/Downloads/Rauhut_prototype" value="2952268094000" />
         <entry key="D:/RauhutTests/SmartRegressionTest" value="2952626402000" />
@@ -532,21 +564,24 @@
         <option value="$PROJECT_DIR$/src/test/java/DeathByCaptcha/com/com/DeathByCaptcha/User.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/test/Report/Report.html" />
-        <option value="$PROJECT_DIR$/Report.html" />
-        <option value="$PROJECT_DIR$/src/test/resources/suite.xml" />
         <option value="$PROJECT_DIR$/src/test/java/Context/ExtentManager.java" />
         <option value="$PROJECT_DIR$/src/test/java/Context/MyDriverFactory.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Pages/BasePage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Pages/IndexPage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Pages/ST_CAN_DLR_FND_AnonymousUserSearchesForDealerWithDirections_Page.java" />
         <option value="$PROJECT_DIR$/src/test/java/Pages/ST_CAN_REQ_CRE_AnonymousUserOrdersBrochure_Page.java" />
         <option value="$PROJECT_DIR$/src/test/java/Pages/ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccount_Page.java" />
         <option value="$PROJECT_DIR$/src/test/java/Tests/BaseTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Tests/ST_CAN_DLR_FND_AnonymousUserSearchesForDealerWithDirections_Test.java" />
         <option value="$PROJECT_DIR$/src/test/java/Tests/ST_CAN_REQ_CRE_AnonymousUserOrdersBrochure_Test.java" />
         <option value="$PROJECT_DIR$/src/test/java/Tests/ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccountTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/Tests/ST_CLI_ACC_OUT_LoggedInUserLogsOutViaConnectMenu_Test.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Tests/ST_CAN_CFG_RST_AnonymousUserConfiguresCarAndResetsConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Pages/BasePage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Tests/ST_CAN_DLR_FND_AnonymousUserSearchesForDealerWithDirections_Test.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Pages/ST_CAN_DLR_FND_AnonymousUserSearchesForDealerWithDirections_Page.java" />
         <option value="$PROJECT_DIR$/src/test/java/Constants/UrlOfPages.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/suite.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/Pages/IndexPage.java" />
+        <option value="$PROJECT_DIR$/Report.html" />
+        <option value="$PROJECT_DIR$/src/test/java/Pages/ST_CAN_CFG_RST_AnonymousUserConfiguresCarAndResetsConfiguration_Page.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Tests/ST_CAN_CFG_RST_AnonymousUserConfiguresCarAndResetsConfiguration_Test.java" />
       </list>
     </option>
   </component>
@@ -604,9 +639,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -663,6 +698,10 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="test" />
               <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -816,7 +855,6 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -830,7 +868,7 @@
       <recent name="$PROJECT_DIR$/src/test/WebDrivers" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.SmartRegressionTest 2 [clean]">
+  <component name="RunManager" selected="Gradle.SmartRegressionTest 2 [chrometests]">
     <configuration default="false" name="Tests in 'DeathByCaptcha'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -1201,35 +1239,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SmartRegressionTest_2_[chrometests] - 2016.10.31 at 13h 14m 39s.xml">
-      <configuration name="SmartRegressionTest 2 [chrometests]" configurationId="GradleRunConfiguration" />
+    <history-entry file="SmartRegressionTest_[chrometests] - 2016.11.18 at 12h 31m 39s.xml">
+      <configuration name="SmartRegressionTest [chrometests]" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="SmartRegressionTest_2_[chrometests] - 2016.10.31 at 15h 31m 37s.xml">
-      <configuration name="SmartRegressionTest 2 [chrometests]" configurationId="GradleRunConfiguration" />
+    <history-entry file="SmartRegressionTest_[chrometests] - 2016.11.18 at 12h 38m 13s.xml">
+      <configuration name="SmartRegressionTest [chrometests]" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="SmartRegressionTest_2_[firefoxtests] - 2016.10.31 at 12h 42m 12s.xml">
-      <configuration name="SmartRegressionTest 2 [firefoxtests]" configurationId="GradleRunConfiguration" />
+    <history-entry file="SmartRegressionTest_[chrometests] - 2016.11.18 at 12h 47m 11s.xml">
+      <configuration name="SmartRegressionTest [chrometests]" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="SmartRegressionTest_2_[firefoxtests] - 2016.10.31 at 12h 44m 46s.xml">
-      <configuration name="SmartRegressionTest 2 [firefoxtests]" configurationId="GradleRunConfiguration" />
+    <history-entry file="SmartRegressionTest_[chrometests] - 2016.11.18 at 12h 51m 20s.xml">
+      <configuration name="SmartRegressionTest [chrometests]" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="SmartRegressionTest_2_[firefoxtests] - 2016.10.31 at 12h 50m 00s.xml">
-      <configuration name="SmartRegressionTest 2 [firefoxtests]" configurationId="GradleRunConfiguration" />
+    <history-entry file="SmartRegressionTest_[chrometests] - 2016.11.18 at 14h 09m 06s.xml">
+      <configuration name="SmartRegressionTest [chrometests]" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="SmartRegressionTest_2_[firefoxtests] - 2016.10.31 at 12h 58m 49s.xml">
-      <configuration name="SmartRegressionTest 2 [firefoxtests]" configurationId="GradleRunConfiguration" />
+    <history-entry file="SmartRegressionTest_[chrometests] - 2016.11.18 at 14h 23m 56s.xml">
+      <configuration name="SmartRegressionTest [chrometests]" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="SmartRegressionTest_2_[firefoxtests] - 2016.10.31 at 13h 08m 12s.xml">
-      <configuration name="SmartRegressionTest 2 [firefoxtests]" configurationId="GradleRunConfiguration" />
+    <history-entry file="SmartRegressionTest_[chrometests] - 2016.11.18 at 14h 56m 03s.xml">
+      <configuration name="SmartRegressionTest [chrometests]" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="SmartRegressionTest_2_[firefoxtests] - 2016.10.31 at 13h 33m 07s.xml">
-      <configuration name="SmartRegressionTest 2 [firefoxtests]" configurationId="GradleRunConfiguration" />
+    <history-entry file="SmartRegressionTest_[firefoxtests] - 2016.11.18 at 12h 49m 49s.xml">
+      <configuration name="SmartRegressionTest [firefoxtests]" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="SmartRegressionTest_2_[firefoxtests] - 2016.10.31 at 15h 17m 39s.xml">
-      <configuration name="SmartRegressionTest 2 [firefoxtests]" configurationId="GradleRunConfiguration" />
+    <history-entry file="SmartRegressionTest_[firefoxtests] - 2016.11.18 at 12h 53m 46s.xml">
+      <configuration name="SmartRegressionTest [firefoxtests]" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="SmartRegressionTest_2_[firefoxtests] - 2016.10.31 at 15h 21m 37s.xml">
-      <configuration name="SmartRegressionTest 2 [firefoxtests]" configurationId="GradleRunConfiguration" />
+    <history-entry file="SmartRegressionTest_[firefoxtests] - 2016.11.18 at 14h 41m 12s.xml">
+      <configuration name="SmartRegressionTest [firefoxtests]" configurationId="GradleRunConfiguration" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -1242,13 +1280,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2656095" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26556018" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27345416" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1076759" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3033049" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18976545" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1282,37 +1320,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/ST_CAN_DLR_FND_AnonymousUserSearchesForDealerWithDirections_Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="69" column="54" selection-start-line="69" selection-start-column="54" selection-end-line="69" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/ST_CLI_ACC_OUT_LoggedInUserLogsOutViaConnectMenu_Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Context/ExtentManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Pages/ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccount_Page.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1564">
@@ -1332,7 +1339,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
-          <folding />
+          <folding>
+            <element signature="e#2049#2050#0" expanded="true" />
+            <element signature="e#2085#2086#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1347,9 +1357,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="52" column="66" selection-start-line="52" selection-start-column="66" selection-end-line="52" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1465,7 +1473,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
           <caret line="34" column="45" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1476,123 +1483,188 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/suite.xml">
+    <entry file="file://$PROJECT_DIR$/src/test/java/Pages/HotmailPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        <state relative-caret-position="68">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1115#1116#0" expanded="false" />
+            <element signature="e#1144#1145#0" expanded="false" />
+            <element signature="e#2500#2501#0" expanded="false" />
+            <element signature="e#2554#2555#0" expanded="false" />
+            <element signature="e#2597#2598#0" expanded="false" />
+            <element signature="e#2633#2634#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Report.html" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/Context/ExtentManager.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/BaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Context/MyDriverFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Pages/BasePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Pages/IndexPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3230">
-          <caret line="216" column="0" selection-start-line="216" selection-start-column="0" selection-end-line="216" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Pages/ST_CAN_DLR_FND_AnonymousUserSearchesForDealerWithDirections_Page.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1853">
-          <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+        <state relative-caret-position="204">
+          <caret line="20" column="50" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Pages/ST_CAN_REQ_CRE_AnonymousUserOrdersBrochure_Page.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2346">
-          <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Pages/ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccount_Page.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2074">
-          <caret line="145" column="0" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/BaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/ST_CAN_DLR_FND_AnonymousUserSearchesForDealerWithDirections_Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1632">
-          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="425">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#593#594#0" expanded="false" />
+            <element signature="e#622#623#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Tests/ST_CAN_REQ_CRE_AnonymousUserOrdersBrochure_Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3332">
-          <caret line="203" column="1" selection-start-line="203" selection-start-column="1" selection-end-line="203" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccountTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1411">
-          <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+        <state relative-caret-position="561">
+          <caret line="40" column="93" selection-start-line="40" selection-start-column="93" selection-end-line="40" selection-end-column="93" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/ST_CLI_ACC_OUT_LoggedInUserLogsOutViaConnectMenu_Test.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/Pages/BasePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="52" column="60" selection-start-line="52" selection-start-column="60" selection-end-line="52" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Pages/HotmailPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="221">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#2199#2200#0" expanded="false" />
+            <element signature="e#2228#2229#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Constants/UrlOfPages.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="238">
+          <caret line="14" column="32" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="32" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/suite.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Pages/ST_CAN_REQ_CRE_AnonymousUserCreatesCONNECTAccountByEmail_Page.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="100" column="16" selection-start-line="100" selection-start-column="16" selection-end-line="100" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Pages/ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccount_Page.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/ST_CLI_ACC_OUT_LoggedInUserLogsOutViaConnectMenu_Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="68" column="30" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Pages/IndexPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="212" column="37" selection-start-line="212" selection-start-column="37" selection-end-line="212" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Context/ExtentManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Context/MyDriverFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccountTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1037">
+          <caret line="84" column="65" selection-start-line="84" selection-start-column="65" selection-end-line="84" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/ST_CAN_REQ_CRE_AnonymousUserCreatesCONNECTAccountByEmail_Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="48" column="72" selection-start-line="48" selection-start-column="63" selection-end-line="48" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Pages/ST_CAN_DLR_FND_AnonymousUserSearchesForDealerWithDirections_Page.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="60" />
+          <folding>
+            <element signature="e#2049#2050#0" expanded="true" />
+            <element signature="e#2085#2086#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Report.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/ST_CAN_DLR_FND_AnonymousUserSearchesForDealerWithDirections_Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="93" column="93" selection-start-line="93" selection-start-column="93" selection-end-line="93" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Pages/ST_CAN_CFG_RST_AnonymousUserConfiguresCarAndResetsConfiguration_Page.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="136" column="5" selection-start-line="136" selection-start-column="5" selection-end-line="136" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/ST_CAN_CFG_RST_AnonymousUserConfiguresCarAndResetsConfiguration_Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2533">
+          <caret line="28" column="61" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

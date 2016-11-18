@@ -9,6 +9,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.Random;
+
 public class BasePage {
 
     protected WebDriver driver;
@@ -64,7 +66,12 @@ public class BasePage {
         return browserVersion;
     }
 
+    public int random(){
+        Random rand = new Random();
+        int n =rand.nextInt();
+        return n;
 
+    }
 
     public WebDriver getDriver() {
         return driver;

@@ -112,10 +112,4 @@ public class ST_CAN_DLR_FND_AnonymousUserSearchesForDealerWithDirections_Page ex
         return optionCount.size();
     }
 
-    public int random(){
-        Random rand = new Random();
-        int n =rand.nextInt();
-        return n;
-
-    }
 }
