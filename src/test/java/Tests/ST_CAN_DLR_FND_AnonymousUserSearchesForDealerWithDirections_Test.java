@@ -74,7 +74,7 @@ public class ST_CAN_DLR_FND_AnonymousUserSearchesForDealerWithDirections_Test ex
 
         st_can_dlr_fnd_anonymousUserSearchesForDealerWithDirections_page.infoContentList();
         test.log(LogStatus.INFO, "Info content list of \"Stuttgart\" dealers is displayed");
-        test.log(LogStatus.INFO, test.addScreenCapture(ExtentManager.CaptureScreen(driver,"./images/"+ st_can_dlr_fnd_anonymousUserSearchesForDealerWithDirections_page.random())));
+        test.log(LogStatus.INFO, test.addScreenCapture(ExtentManager.CaptureScreen(driver,"./images/"+ basePage.random())));
 
         Integer listOfDialers = st_can_dlr_fnd_anonymousUserSearchesForDealerWithDirections_page.countOfDialers();
         test.log(LogStatus.INFO, "Number of dialers is: "+ listOfDialers);
@@ -86,7 +86,7 @@ public class ST_CAN_DLR_FND_AnonymousUserSearchesForDealerWithDirections_Test ex
 
         st_can_dlr_fnd_anonymousUserSearchesForDealerWithDirections_page.infoContentList();
         test.log(LogStatus.INFO, "Info content list of \"70197\" dealers is displayed");
-        test.log(LogStatus.INFO, test.addScreenCapture(ExtentManager.CaptureScreen(driver,"./images/"+ st_can_dlr_fnd_anonymousUserSearchesForDealerWithDirections_page.random())));
+        test.log(LogStatus.INFO, test.addScreenCapture(ExtentManager.CaptureScreen(driver,"./images/"+ basePage.random())));
 
         listOfDialers = st_can_dlr_fnd_anonymousUserSearchesForDealerWithDirections_page.countOfDialers();
         test.log(LogStatus.INFO, "Number of dialers is: "+ listOfDialers);
@@ -97,7 +97,7 @@ public class ST_CAN_DLR_FND_AnonymousUserSearchesForDealerWithDirections_Test ex
         test.log(LogStatus.INFO, "Dealers in the proximity of user location are displayed in the list");
 
         st_can_dlr_fnd_anonymousUserSearchesForDealerWithDirections_page.directionTable();
-        test.log(LogStatus.INFO, test.addScreenCapture(ExtentManager.CaptureScreen(driver,"./images/"+ st_can_dlr_fnd_anonymousUserSearchesForDealerWithDirections_page.random())));
+        test.log(LogStatus.INFO, test.addScreenCapture(ExtentManager.CaptureScreen(driver,"./images/"+ basePage.random())));
         test.log(LogStatus.INFO, "Route is calculated and displayed as text");
 
     }

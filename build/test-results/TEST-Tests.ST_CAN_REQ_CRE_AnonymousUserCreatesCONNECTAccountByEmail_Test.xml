@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Tests.ST_CAN_REQ_CRE_AnonymousUserCreatesCONNECTAccountByEmail_Test" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-11-18T12:45:28" hostname="Tester-3" time="128.935">
+  <properties/>
+  <testcase name="testLoggedInUserLogsOutViaConnectMenu" classname="Tests.ST_CAN_REQ_CRE_AnonymousUserCreatesCONNECTAccountByEmail_Test" time="128.935"/>
+  <system-out><![CDATA[evx9
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

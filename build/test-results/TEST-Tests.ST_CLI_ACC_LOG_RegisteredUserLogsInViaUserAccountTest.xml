@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Tests.ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccountTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-11-18T12:51:26" hostname="Tester-3" time="158.013">
+  <properties/>
+  <testcase name="testLoggedInUserLogsOutViaConnectMenu" classname="Tests.ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccountTest" time="158.013"/>
+  <system-out><![CDATA[CF9D
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
