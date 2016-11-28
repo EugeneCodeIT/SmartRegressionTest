@@ -106,7 +106,6 @@ public class ST_CAN_DLR_FND_AnonymousUserSearchesForDealerWithDirections_Page ex
     }
 
     public int countOfDialers(){
-
         List<WebElement> optionCount = driver.findElements(By.xpath("//div[@class='row infocontent']/a"));
         optionCount.size();
         return optionCount.size();
