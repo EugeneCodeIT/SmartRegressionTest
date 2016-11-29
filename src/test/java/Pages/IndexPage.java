@@ -1,9 +1,6 @@
 package Pages;
 
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 
 public class IndexPage extends BasePage {
@@ -74,8 +71,11 @@ public class IndexPage extends BasePage {
     @FindBy(xpath = "//a[@class='nba vp12 btn_dealer_search']")
     private WebElement dealerSearchButton;
 
-    @FindBy(xpath = "html/body/div[2]/header/div/div/div[3]/div[7]/ul/li[2]/div/a/span")
+    @FindBy(xpath = "//div[@class='secondary-bar action-bar']/ul/li/div/a[@class='nav-title nav-title-login e-copytext6' or @class='nav-title nav-title-login e-copytext6 nav-title-active' and contains(@href,'#')]")
     private WebElement connectButton;
+
+    @FindBy(xpath = "//div[@class='secondary-bar action-bar']/ul/li/div/a[@class='nav-title nav-title-login e-copytext6' or @class='nav-title nav-title-login e-copytext6 nav-title-active' and contains(@href,'#')]")
+    private WebElement connectTestButton;
 
     @FindBy(xpath = "nav-title nav-title-login e-copytext6 nav-title-active")
     private WebElement connectButtonIsActive;
@@ -83,8 +83,11 @@ public class IndexPage extends BasePage {
     @FindBy(xpath = ".//*[@id='ciam-weblogin-auth-login-button']")
     private WebElement anmelden;
 
-    @FindBy(xpath = "//span[contains(.,'TEST')]")
-    private WebElement userName;
+    @FindBy(xpath = "//div[@class='secondary-bar action-bar']/ul/li/div/a[@class='nav-title nav-title-login e-copytext6' or @class='nav-title nav-title-login e-copytext6 nav-title-active' and contains(.,'Connect')]")
+    private WebElement connectName;
+
+    @FindBy(xpath = "//div[@class='secondary-bar action-bar']/ul/li/div/a[@class='nav-title nav-title-login e-copytext6' or @class='nav-title nav-title-login e-copytext6 nav-title-active' and contains(.,'Test')]")
+    private WebElement userTestName;
 
     @FindBy(xpath = "html/body/div[2]/header/div/div/div[3]/div[2]/ul/li[1]/div/a/span")
     private WebElement smartFortwoButton;
@@ -97,6 +100,9 @@ public class IndexPage extends BasePage {
 
     @FindBy(xpath = "//a[@data-tracking-elementname='navigation:C-MODEL-FLYOUTS:smart fortwo cabrio:Konfigurator']")
     private WebElement smartFortwoCabrioKonfiguratorButton;
+
+    @FindBy(xpath = "//li[@class='nav-item action-nav-item login-nav-item vp12']/div/div/div/div/div[@class='login-nav-headline']")
+    private WebElement logoutPersonalizationButton;
 
     public IndexPage(WebDriver driver) {
         super(driver);
@@ -210,16 +216,77 @@ public class IndexPage extends BasePage {
 
     public void connectbuttonClick() throws InterruptedException {
         Thread.sleep(2000);
+        int count = 0;
+        do {
+            try{
+                waitOfElement(connectButton);
+            }catch (TimeoutException e){
+                driver.navigate().refresh();
+                System.out.println("Index page: 225 string");
+                count++;
+                continue;
+            }
+            break;
+        }while (count < 3);
         moveToElement(connectButton);
     }
 
+    public void hoverConnectButton() throws InterruptedException {
+        int countConnect = 0;
+        int count = 0;
+        do {
+            try{
+                String connect = driver.findElement(By.xpath("//div[@class='secondary-bar action-bar']/ul/li/div/a[@class='nav-title nav-title-login e-copytext6' or @class='nav-title nav-title-login e-copytext6 nav-title-active' and contains(@href,'#')]")).getAttribute("class");
+                System.out.println(connect);
+                WebElement connectButton = driver.findElement(By.xpath("//div[@class='secondary-bar action-bar']/ul/li/div/a[@class='"+connect+"' and contains(@href,'#')]"));
+                connectButton.isDisplayed();
+            }catch (StaleElementReferenceException | NoSuchElementException e){
+                driver.navigate().refresh();
+                System.out.println("Connect button isn't display page will be reloaded");
+                count++;
+                continue;
+            }
+            break;
+        }while (count < 3);
+
+        do {
+            try{
+                moveToElement(connectTestButton);
+                logoutPersonalizationButton.isDisplayed();
+            }catch (NoSuchElementException e){
+                System.out.println("Menu isn't opened page will be reloaded");
+                countConnect++;
+                driver.navigate().refresh();
+                continue;
+            }
+            break;
+        }while (countConnect < 3);
+    }
+
     public String getUserName() throws InterruptedException {
+        int count = 0;
+        do {
+            try{
+                userTestName.isDisplayed();
+            }catch (NoSuchElementException e){
+                System.out.println("Index page: wait of user is loading");
+                count ++;
+                driver.navigate().refresh();
+                continue;
+            }
+            break;
+        }while (count < 3);
+        return connectButton.getText();
+    }
+
+    public String UserName() throws InterruptedException {
         Thread.sleep(2000);
         try{
-            waitOfElement(userName);
+            waitOfElement(userTestName);
         }catch (TimeoutException e){
+            System.out.println("user name is wrong page will be reloaded");
         }
-        return connectButton.getText();
+        return connectTestButton.getText();
     }
 
     public String getConnectButtonName(){
@@ -244,6 +311,4 @@ public class IndexPage extends BasePage {
         waitVisibilityOfElement(smartFortwoCabrioKonfiguratorButton);
         smartFortwoCabrioKonfiguratorButton.click();
     }
-
-
 }

@@ -1,6 +1,7 @@
 package Pages;
 
 import org.openqa.selenium.Capabilities;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -9,6 +10,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Random;
 
 public class BasePage {
@@ -25,12 +28,12 @@ public class BasePage {
     }
 
     public void waitOfElement(WebElement element){
-        WebDriverWait wait = new WebDriverWait(driver,30);
+        WebDriverWait wait = new WebDriverWait(driver,10);
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
     public void waitVisibilityOfElement(WebElement element){
-        (new WebDriverWait(driver, 30))
+        (new WebDriverWait(driver, 10))
                 .until(ExpectedConditions.visibilityOf(element));
     }
 
@@ -40,6 +43,14 @@ public class BasePage {
     public void moveToElement(WebElement element){
         Actions actions = new Actions(driver);
         actions.moveToElement(element).build().perform();
+    }
+
+    /**
+     * Method scrolls down on 250 pixels.
+     */
+    public void scrollDown(){
+        JavascriptExecutor jse = (JavascriptExecutor)driver;
+        jse.executeScript("scroll(0, 700);");
     }
 
     public String getWindowWidth(){
@@ -71,6 +82,11 @@ public class BasePage {
         int n =rand.nextInt();
         return n;
 
+    }
+    public static String Data() {
+        Calendar cal = Calendar.getInstance();
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+        return sdf.format(cal.getTime());
     }
 
     public WebDriver getDriver() {

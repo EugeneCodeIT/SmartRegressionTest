@@ -82,7 +82,7 @@ public class ST_CAN_REQ_CRE_AnonymousUserCreatesCONNECTAccountByEmail_Test exten
         test.log(LogStatus.INFO, "Confirmation Title is displayed");
 
         driver.get(UrlOfPages.hotmail);
-        hotmailPage.clickOnEmail();
+        hotmailPage.clickOnConfirmationEmail();
         test.log(LogStatus.INFO, "Mail is come");
         String parentHandle = driver.getWindowHandle();
         hotmailPage.clickOnVerificationLink();

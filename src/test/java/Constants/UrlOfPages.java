@@ -13,4 +13,5 @@ public class UrlOfPages {
     public static String fortwoCabrio = "https://www.smart.com/de/de/index.html#?servicepage.id=fortwo-cabrio-configurator";
     public static String service = "https://www.smart.com/de/de/index.html#?servicepage.id=Model-Selection";
     public static String forfour = "https://www.smart.com/de/de/index.html#?servicepage.id=forfour-configurator";
+    public static String homePageAfterSubmittingNewEmail = "https://www.smart.com/de/de/index.profile.openconnect.html";
 }

@@ -8,8 +8,10 @@ import org.openqa.selenium.support.FindBy;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.*;
+import java.sql.Time;
 
 public class ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccount_Page extends BasePage {
+    IndexPage indexPage;
 
     @FindBy(xpath = ".//*[@id='name']")
     private WebElement emailField;
@@ -26,13 +28,16 @@ public class ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccount_Page extends Base
     @FindBy(xpath = "//div[@class='secondary-bar action-bar']/ul/li[2]/div/div/div/div/ul/li[5]/a[@href='/de/de/index/_jcr_content/header.logout.html']")
     private WebElement logoutButton;
 
-    @FindBy(xpath = "//form[@class='form-horizontal no-obvious-asterisk']")
-    private WebElement loginForm;
+    @FindBy(xpath = "//div[@class='secondary-bar action-bar']/ul/li[2]/div/div/div/div/ul/li[5]/a[@href='/de/de/index/personalization/profile-page/_jcr_content/header.logout.html']")
+    private WebElement logoutPersonalizationButton;
+
+    @FindBy(xpath = "//div[@class='secondary-bar action-bar']/ul/li[2]/div/div/div/div/ul/li/a[@href='/de/de/index/personalization/profile-page.html']")
+    private WebElement profileButton;
 
     @FindBy(xpath = "//div[@class='secondary-bar action-bar']/ul/li[2]/div/a/span[@class='nav-title-text' and contains(.,'Connect')]")
     private WebElement connectButtonContainsConnect;
 
-    @FindBy(xpath = "html/body/div[2]/header/div/div/div[3]/div[7]/ul/li[2]/div/a/span")
+    @FindBy(xpath = "//div[@class='secondary-bar action-bar']/ul/li/div/a[@class='nav-title nav-title-login e-copytext6' or @class='nav-title nav-title-login e-copytext6 nav-title-active' and contains(@href,'#')]")
     private WebElement connectButton;
 
     @FindBy(xpath = "//div[contains(@class,'server-side-error')]")
@@ -43,6 +48,15 @@ public class ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccount_Page extends Base
 
     @FindBy(xpath = ".//*[@id='framelogin']")
     private WebElement frame;
+
+    @FindBy(xpath = "//div[@class='secondary-bar action-bar']/ul/li/div/a[@class='nav-title nav-title-login e-copytext6' or @class='nav-title nav-title-login e-copytext6 nav-title-active' and contains(@href,'#')]")
+    private WebElement connectTestButton;
+
+    @FindBy(xpath = "//div[@class='secondary-bar action-bar']/ul/li/div/div/div/div[@class='login-form']")
+    private WebElement loginForm;
+
+    @FindBy(xpath = "//img[@alt='smart ambient UK']")
+    private WebElement img;
 
     public ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccount_Page(WebDriver driver) {
         super(driver);
@@ -57,7 +71,9 @@ public class ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccount_Page extends Base
     }
 
     public void emailField(String email){
+        waitVisibilityOfElement(emailField);
         waitOfElement(emailField);
+        emailField.clear();
         emailField.sendKeys(email);
     }
 
@@ -81,12 +97,63 @@ public class ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccount_Page extends Base
         waitOfElement(connectButtonContainsConnect);
     }
 
-    public void switchToFrame(){
-        try{
-            driver.switchTo().frame(driver.findElement(By.xpath(".//*[@id='framelogin']")));
-        }catch (WebDriverException e){
-            System.out.println("Frame is loading");
-        }
+    public void logoutFromEditProfile(){
+        int count = 0;
+        do {
+            try{
+                waitOfElement(logoutPersonalizationButton);
+            }catch (TimeoutException e){
+                System.out.println("logout button is absent");
+                count++;
+                driver.navigate().refresh();
+                waitOfElement(connectTestButton);
+                moveToElement(img);
+                moveToElement(connectTestButton);
+                continue;
+            }
+            break;
+        }while (count < 3);
+        logoutPersonalizationButton.click();
+        moveToElement(connectButton);
+        waitOfElement(connectButtonContainsConnect);
+    }
+
+    public void profileButtonClick(){
+        int count = 0;
+        do {
+            try{
+                waitOfElement(profileButton);
+            }catch (TimeoutException e){
+                System.out.println("profile button is absent");
+                count++;
+                driver.navigate().refresh();
+                moveToElement(connectTestButton);
+                continue;
+            }
+            break;
+        }while (count < 3);
+        profileButton.click();
+    }
+
+    public void switchToFrame() throws InterruptedException {
+        int count = 0;
+        do {
+            try{
+                driver.switchTo().frame(driver.findElement(By.xpath(".//*[@id='framelogin']")));
+            }catch (WebDriverException e){
+                System.out.println("Frame is loading");
+                count++;
+                driver.navigate().refresh();
+                Thread.sleep(3000);
+                String coonect = driver.findElement(By.xpath("//div[@class='secondary-bar action-bar']/ul/li/div/a[@class='nav-title nav-title-login e-copytext6' or @class='nav-title nav-title-login e-copytext6 nav-title-active' and contains(@href,'#')]")).getAttribute("class");
+                WebElement connectButton = driver.findElement(By.xpath("//div[@class='secondary-bar action-bar']/ul/li/div/a[@class='"+coonect+"' and contains(@href,'#')]"));
+                System.out.println(connectButton);
+                waitOfElement(connectButton);
+                moveToElement(connectButton);
+                continue;
+            }
+            break;
+        }while (count < 3);
     }
 
     public void switchToWebPage(){
@@ -140,6 +207,10 @@ public class ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccount_Page extends Base
             }
             break;
         }while (countOperations < 3 );
+    }
+
+    public void userlogsIn(){
+
     }
 
 }
