@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Tests.ST_CLI_ACC_UPD_LoggedInUserChangesEmailAddress_Test" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-11-28T18:00:02" hostname="Tester-2" time="125.578">
-  <properties/>
-  <testcase name="testLoggedInUserChangesEmailAddress" classname="Tests.ST_CLI_ACC_UPD_LoggedInUserChangesEmailAddress_Test" time="125.578"/>
-  <system-out><![CDATA[smart_automater2@outlook.com
-smart_automater@outlook.com
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

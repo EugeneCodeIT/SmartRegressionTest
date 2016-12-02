@@ -34,7 +34,7 @@ public class ST_CLI_ACC_OUT_LoggedInUserLogsOutViaConnectMenu_Test extends BaseT
      * Click "Log Out"
      * Check that instead of "user name" appears "Connect"
      */
-    @Test
+    @Test(groups = {"ST_CLI_ACC_OUT_LoggedInUserLogsOutViaConnectMenu_Test"})
     public void testLoggedInUserLogsOutViaConnectMenu () throws InterruptedException {
         extent.addSystemInfo("Resolution",basePage.getWindowHeight() +"X"+ basePage.getWindowWidth());
 

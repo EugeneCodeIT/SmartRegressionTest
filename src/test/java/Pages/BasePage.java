@@ -33,7 +33,7 @@ public class BasePage {
     }
 
     public void waitVisibilityOfElement(WebElement element){
-        (new WebDriverWait(driver, 10))
+        (new WebDriverWait(driver, 15))
                 .until(ExpectedConditions.visibilityOf(element));
     }
 

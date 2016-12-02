@@ -31,7 +31,7 @@ public class ST_CAN_REQ_CRE_AnonymousUserOrdersBrochure_Test extends BaseTest{
      * checks that all mandatory fields are marked with a star
      */
 
-    @Test
+    @Test(groups = {"ST_CAN_REQ_CRE_AnonymousUserOrdersBrochure_Test"})
     public void testBroschüreBestellen() {
         extent.addSystemInfo("Resolution",basePage.getWindowHeight() +"X"+ basePage.getWindowWidth());
 
@@ -97,7 +97,7 @@ public class ST_CAN_REQ_CRE_AnonymousUserOrdersBrochure_Test extends BaseTest{
      * closes psyma PopUp
      * checks that all mandatory fields are marked with a star
      */
-    @Test
+    @Test(groups = {"ST_CAN_REQ_CRE_AnonymousUserOrdersBrochure_Test"})
     public void testSelectBroschüreBestellenFromSideNavigator() {
         driver.get(UrlOfPages.indexPage);
         test = extent.startTest("Select Broschüre Bestellen From Side Navigator", "Verify broschüre bestellen");
@@ -164,7 +164,7 @@ public class ST_CAN_REQ_CRE_AnonymousUserOrdersBrochure_Test extends BaseTest{
      * closes psyma PopUp
      * fills Form and send it (hard coded)
      */
-    @Test
+    @Test(groups = {"ST_CAN_REQ_CRE_AnonymousUserOrdersBrochure_Test"})
     public void testSelectBroschüreAndFillForm() {
         driver.get(UrlOfPages.indexPage);
         test = extent.startTest("Select Broschüre And FillForm", "Verify broschüre bestellen");
