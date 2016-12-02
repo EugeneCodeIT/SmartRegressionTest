@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Tests.ST_CAN_CFG_RST_AnonymousUserConfiguresCarAndResetsConfiguration_Test" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-11-28T17:19:56" hostname="Tester-2" time="71.133">
-  <properties/>
-  <testcase name="testAnonymousUserConfiguresCarAndResetsConfiguration" classname="Tests.ST_CAN_CFG_RST_AnonymousUserConfiguresCarAndResetsConfiguration_Test" time="71.133"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

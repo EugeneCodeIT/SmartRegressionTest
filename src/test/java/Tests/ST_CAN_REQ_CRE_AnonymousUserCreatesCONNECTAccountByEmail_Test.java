@@ -41,7 +41,7 @@ public class ST_CAN_REQ_CRE_AnonymousUserCreatesCONNECTAccountByEmail_Test exten
      * Clicks "Weiter" button
      * Checks that name of created user is displayed under connect logo
      */
-    @Test
+    @Test(groups = {"ST_CAN_REQ_CRE_AnonymousUserCreatesCONNECTAccountByEmail_Test"})
     public void testLoggedInUserLogsOutViaConnectMenu() throws InterruptedException, IOException, Exception {
         extent.addSystemInfo("Resolution",basePage.getWindowHeight()+"X"+basePage.getWindowWidth());
 

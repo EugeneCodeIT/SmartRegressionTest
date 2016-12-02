@@ -42,7 +42,7 @@ public class ST_CAN_DLR_FND_AnonymousUserSearchesForDealerWithDirections_Test ex
      * clicks direction button
      * check direction table with data is displayed
      */
-    @Test
+    @Test(groups = {"ST_CAN_DLR_FND_AnonymousUserSearchesForDealerWithDirections_Test"})
     public void testAnonymousUserSearchesForDealerWithDirections () throws InterruptedException {
         extent.addSystemInfo("Resolution",basePage.getWindowHeight() +"X"+ basePage.getWindowWidth());
 

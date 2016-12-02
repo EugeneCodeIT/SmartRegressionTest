@@ -28,7 +28,7 @@ public class ST_CAN_CFG_RST_AnonymousUserConfiguresCarAndResetsConfiguration_Tes
     /**
      * This test was created through ST_CAN_CFG_RST test case
      */
-    @Test
+    @Test(groups = {"ST_CAN_CFG_RST_AnonymousUserConfiguresCarAndResetsConfiguration_Test"})
     public void testAnonymousUserConfiguresCarAndResetsConfiguration() throws InterruptedException {
         extent.addSystemInfo("Resolution",basePage.getWindowHeight()+"X"+basePage.getWindowWidth());
 

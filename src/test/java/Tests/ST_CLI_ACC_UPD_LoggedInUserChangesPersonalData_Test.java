@@ -24,12 +24,13 @@ public class ST_CLI_ACC_UPD_LoggedInUserChangesPersonalData_Test extends BaseTes
         basePage = new BasePage(driver);
         hotmailPage = new HotmailPage(driver);
     }
-    @Test
+
+    @Test(groups = {"ST_CLI_ACC_UPD_LoggedInUserChangesPersonalData_Test"})
     public void testLoggedInUserChangesPersonalData () throws InterruptedException {
         extent.addSystemInfo("Resolution",basePage.getWindowHeight() +"X"+ basePage.getWindowWidth());
 
         driver.get(UrlOfPages.indexPage);
-        test = extent.startTest("Logged in user changes personal data", "Verify Logged in user changes personal data");
+        test = extent.startTest("ST_CLI_ACC_UPD Logged in user changes personal data", "Verify Logged in user changes personal data");
 
         String indexPageURL = indexPage.getAssertUrl();
         Assert.assertEquals(indexPageURL, UrlOfPages.indexPage);
@@ -56,6 +57,7 @@ public class ST_CLI_ACC_UPD_LoggedInUserChangesPersonalData_Test extends BaseTes
         st_cli_acc_log_RegisteredUserLogsInViaUserAccount_page.profileButtonClick();
         st_cli_acc_upd_loggedInUserChangesEmailAddress_page.clickEditPersonalData();
         test.log(LogStatus.INFO, "\"Bearbeiten\" button is visible");
+
         System.out.println(BasePage.Data());
         String data = BasePage.Data();
         st_cli_acc_upd_loggedInUserChangesEmailAddress_page.enterPersonalData("12345 "+ BasePage.Data(), "Teststrasse 123", "123", "Testhausen","12345");

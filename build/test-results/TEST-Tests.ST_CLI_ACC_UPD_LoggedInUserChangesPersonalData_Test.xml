@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Tests.ST_CLI_ACC_UPD_LoggedInUserChangesPersonalData_Test" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-11-28T18:02:11" hostname="Tester-2" time="37.617">
-  <properties/>
-  <testcase name="testLoggedInUserChangesPersonalData" classname="Tests.ST_CLI_ACC_UPD_LoggedInUserChangesPersonalData_Test" time="37.617"/>
-  <system-out><![CDATA[nav-title nav-title-login e-copytext6
-20:02:38
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

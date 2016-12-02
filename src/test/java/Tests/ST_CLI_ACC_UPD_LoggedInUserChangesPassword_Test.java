@@ -26,12 +26,12 @@ public class ST_CLI_ACC_UPD_LoggedInUserChangesPassword_Test extends BaseTest{
         hotmailPage = new HotmailPage(driver);
     }
 
-    @Test
+    @Test(priority=1, groups = {"ST_CLI_ACC_UPD_LoggedInUserChangesPassword_Test"})
     public void testLoggedInUserChangesPassword () throws InterruptedException {
-        extent.addSystemInfo("Resolution",basePage.getWindowHeight() +"X"+ basePage.getWindowWidth());
+        extent.addSystemInfo("Resolution", basePage.getWindowHeight() + "X" + basePage.getWindowWidth());
 
         driver.get(UrlOfPages.indexPage);
-        test = extent.startTest("Logged in user changes password", "Verify Logged in user changes password");
+        test = extent.startTest("ST_CLI_ACC_UPD Logged in user changes password", "Verify Logged in user changes password");
 
         String indexPageURL = indexPage.getAssertUrl();
         Assert.assertEquals(indexPageURL, UrlOfPages.indexPage);
@@ -42,9 +42,9 @@ public class ST_CLI_ACC_UPD_LoggedInUserChangesPassword_Test extends BaseTest{
         indexPage.closeCookiesPopUp();
         //indexPage.psymaPopUpClose();
         indexPage.connectbuttonClick();
-        test.log(LogStatus.INFO, "Connect frame is opened");
 
         st_cli_acc_log_RegisteredUserLogsInViaUserAccount_page.switchToFrame();
+        test.log(LogStatus.INFO, "Connect frame is opened");
 
         st_cli_acc_log_RegisteredUserLogsInViaUserAccount_page.emailField("tg_tester@outlook.de");
         st_cli_acc_log_RegisteredUserLogsInViaUserAccount_page.passwordField("Testen123");
@@ -71,6 +71,17 @@ public class ST_CLI_ACC_UPD_LoggedInUserChangesPassword_Test extends BaseTest{
         String connectButtonName = indexPage.getConnectButtonName();
         Assert.assertEquals(connectButtonName, "Connect");
         test.log(LogStatus.INFO, "User is logged out successfully");
+    }
+
+    @Test(priority=2, groups = {"ST_CLI_ACC_UPD_LoggedInUserChangesPassword_Test"})
+    public void testLoginByChangedPassword() throws InterruptedException {
+        extent.addSystemInfo("Resolution", basePage.getWindowHeight() + "X" + basePage.getWindowWidth());
+
+        driver.get(UrlOfPages.indexPage);
+        test = extent.startTest("ST_CLI_ACC_UPD Login By Changed Password", "Verify Login By Changed Password");
+        test.log(LogStatus.INFO, basePage.getBrowserName() + basePage.getBrowserVersion());
+
+        indexPage.closeCookiesPopUp();
 
         indexPage.connectbuttonClick();
 
@@ -80,13 +91,32 @@ public class ST_CLI_ACC_UPD_LoggedInUserChangesPassword_Test extends BaseTest{
         st_cli_acc_log_RegisteredUserLogsInViaUserAccount_page.passwordField("Testen123#");
         st_cli_acc_log_RegisteredUserLogsInViaUserAccount_page.submitButtonClick();
 
-        indexPage.hoverConnectButton();
-
-        userName = indexPage.getUserName();
+        String userName = indexPage.getUserName();
         Assert.assertEquals(userName, "Test");
-        test.log(LogStatus.INFO, "User is logged in");
+        test.log(LogStatus.INFO, "User is logged in with new password successfully");}
+
+    @Test(priority = 3, groups = {"ST_CLI_ACC_UPD_LoggedInUserChangesPassword_Test"})
+    public void testChangePasswordBack() throws InterruptedException {
+        driver.get(UrlOfPages.indexPage);
+        test = extent.startTest("ST_CLI_ACC_UPD Change Password Back", "Verify Change Password Back");
+        test.log(LogStatus.INFO, basePage.getBrowserName() + basePage.getBrowserVersion());
+
+        indexPage.closeCookiesPopUp();
+
+        indexPage.connectbuttonClick();
+
+        st_cli_acc_log_RegisteredUserLogsInViaUserAccount_page.switchToFrame();
+
+        st_cli_acc_log_RegisteredUserLogsInViaUserAccount_page.emailField("tg_tester@outlook.de");
+        st_cli_acc_log_RegisteredUserLogsInViaUserAccount_page.passwordField("Testen123#");
+        st_cli_acc_log_RegisteredUserLogsInViaUserAccount_page.submitButtonClick();
+
+        String userName = indexPage.getUserName();
+        Assert.assertEquals(userName, "Test");
+        test.log(LogStatus.INFO, "User is logged in with new password successfully");
 
         indexPage.hoverConnectButton();
+
         st_cli_acc_log_RegisteredUserLogsInViaUserAccount_page.profileButtonClick();
         st_cli_acc_upd_loggedInUserChangesEmailAddress_page.clickEditPasswordButton();
         test.log(LogStatus.INFO, "Popup to enter new password opens");
@@ -99,7 +129,7 @@ public class ST_CLI_ACC_UPD_LoggedInUserChangesPassword_Test extends BaseTest{
         indexPage.hoverConnectButton();
         st_cli_acc_log_RegisteredUserLogsInViaUserAccount_page.logoutFromEditProfile();
 
-        connectButtonName = indexPage.getConnectButtonName();
+        String connectButtonName = indexPage.getConnectButtonName();
         Assert.assertEquals(connectButtonName, "Connect");
         test.log(LogStatus.INFO, "User is logged out successfully");
 
@@ -113,6 +143,6 @@ public class ST_CLI_ACC_UPD_LoggedInUserChangesPassword_Test extends BaseTest{
 
         userName = indexPage.getUserName();
         Assert.assertEquals(userName, "Test");
-        test.log(LogStatus.INFO, "User is logged in");
+        test.log(LogStatus.INFO, "User is logged in with changed back password successfully");
     }
 }

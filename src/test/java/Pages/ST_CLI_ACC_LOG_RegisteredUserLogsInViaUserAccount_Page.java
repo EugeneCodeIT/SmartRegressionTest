@@ -71,7 +71,6 @@ public class ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccount_Page extends Base
     }
 
     public void emailField(String email){
-        waitVisibilityOfElement(emailField);
         waitOfElement(emailField);
         emailField.clear();
         emailField.sendKeys(email);
@@ -87,6 +86,7 @@ public class ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccount_Page extends Base
     }
 
     public void rememberMeCheckCheckbox(){
+        waitVisibilityOfElement(rememberMeCheckbox);
         rememberMeCheckbox.click();
     }
 
@@ -137,6 +137,7 @@ public class ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccount_Page extends Base
 
     public void switchToFrame() throws InterruptedException {
         int count = 0;
+        moveToElement(connectTestButton);
         do {
             try{
                 driver.switchTo().frame(driver.findElement(By.xpath(".//*[@id='framelogin']")));

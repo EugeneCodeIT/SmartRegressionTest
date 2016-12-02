@@ -42,7 +42,7 @@ public class ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccountTest extends BaseT
      * Click "Log Out"
      * Check that instead of "user name" appears "Connect"
      */
-    @Test
+    @Test(groups = {"ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccountTest"})
     public void testLoggedInUserLogsOutViaConnectMenu () throws InterruptedException, IOException, Exception {
         extent.addSystemInfo("Resolution",basePage.getWindowHeight() +"X"+ basePage.getWindowWidth());
 

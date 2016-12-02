@@ -1,0 +1,32 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="groupsTestNG" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="groups">
+        <value>
+          <list size="19">
+            <item index="0" class="java.lang.String" itemvalue="group1" />
+            <item index="1" class="java.lang.String" itemvalue="ST_CLI_ACC_UPD_LoggedInUserChangesEmailAddress" />
+            <item index="2" class="java.lang.String" itemvalue="ST_CLI_ACC_UPD_LoggedInUserChangesPassword" />
+            <item index="3" class="java.lang.String" itemvalue="ST_CLI_ACC_UPD_LoggedInUserChangesPersonalData" />
+            <item index="4" class="java.lang.String" itemvalue="ST_CLI_ACC_OUT_LoggedInUserLogsOutViaConnectMenu" />
+            <item index="5" class="java.lang.String" itemvalue="ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccount" />
+            <item index="6" class="java.lang.String" itemvalue="ST_CAN_REQ_CRE_AnonymousUserOrdersBrochure" />
+            <item index="7" class="java.lang.String" itemvalue="ST_CAN_REQ_CRE_AnonymousUserCreatesCONNECTAccountByEmail" />
+            <item index="8" class="java.lang.String" itemvalue="ST_CAN_DLR_FND_AnonymousUserSearchesForDealerWithDirections" />
+            <item index="9" class="java.lang.String" itemvalue="ST_CAN_CFG_RST_AnonymousUserConfiguresCarAndResetsConfiguration" />
+            <item index="10" class="java.lang.String" itemvalue="ST_CLI_ACC_UPD_LoggedInUserChangesEmailAddress_Test" />
+            <item index="11" class="java.lang.String" itemvalue="ST_CAN_CFG_RST_AnonymousUserConfiguresCarAndResetsConfiguration_Test" />
+            <item index="12" class="java.lang.String" itemvalue="ST_CAN_DLR_FND_AnonymousUserSearchesForDealerWithDirections_Test" />
+            <item index="13" class="java.lang.String" itemvalue="ST_CAN_REQ_CRE_AnonymousUserCreatesCONNECTAccountByEmail_Test" />
+            <item index="14" class="java.lang.String" itemvalue="ST_CAN_REQ_CRE_AnonymousUserOrdersBrochure_Test" />
+            <item index="15" class="java.lang.String" itemvalue="ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccountTest" />
+            <item index="16" class="java.lang.String" itemvalue="ST_CLI_ACC_OUT_LoggedInUserLogsOutViaConnectMenu_Test" />
+            <item index="17" class="java.lang.String" itemvalue="ST_CLI_ACC_UPD_LoggedInUserChangesPassword_Test" />
+            <item index="18" class="java.lang.String" itemvalue="ST_CLI_ACC_UPD_LoggedInUserChangesPersonalData_Test" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

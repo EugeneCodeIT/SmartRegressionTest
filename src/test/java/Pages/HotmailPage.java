@@ -17,7 +17,7 @@ public class HotmailPage extends BasePage {
     @FindBy(xpath = ".//*[@role='option' and @tabindex='0' and contains(.,'Ihre Registrierung bei smart.com')]")
     private WebElement confirmationEmail;
 
-    @FindBy(xpath = ".//*[@role='option' and @tabindex='0' and contains(.,'Änderung der E-Mail-Adresse bei smart.com')]")
+    @FindBy(xpath = ".//*[@role='option' and contains(.,'Änderung der E-Mail-Adresse bei smart.com')]")
     private WebElement changeEmail;
 
     @FindBy(xpath = "//a[contains(.,'Registrierung abschließen')]")
@@ -150,6 +150,7 @@ public class HotmailPage extends BasePage {
         moveToElement(menuButton);
         menuButton.click();
         waitOfElement(logOutButton);
+        waitVisibilityOfElement(logOutButton);
         logOutButton.click();
         waitOfElement(settingMsnButton);
     }
