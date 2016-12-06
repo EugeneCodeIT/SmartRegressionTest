@@ -47,7 +47,7 @@ public class ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccountTest extends BaseT
         extent.addSystemInfo("Resolution",basePage.getWindowHeight() +"X"+ basePage.getWindowWidth());
 
         driver.get(UrlOfPages.indexPage);
-        test = extent.startTest("Logged In User Logs Out Via Connect Menu", "Verify Logs In Via Connect Menu using captcha");
+        test = extent.startTest(BasePage.Data()+" Logged In User Logs Out Via Connect Menu", "Verify Logs In Via Connect Menu using captcha");
 
         String indexPageURL = indexPage.getAssertUrl();
         Assert.assertEquals(indexPageURL, UrlOfPages.indexPage);

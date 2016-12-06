@@ -47,7 +47,7 @@ public class ST_CAN_DLR_FND_AnonymousUserSearchesForDealerWithDirections_Test ex
         extent.addSystemInfo("Resolution",basePage.getWindowHeight() +"X"+ basePage.getWindowWidth());
 
         driver.get(UrlOfPages.indexPage);
-        test = extent.startTest("Anonymous User Searches For Dealer With Directions", "Verify IndexPage");
+        test = extent.startTest(BasePage.Data()+" Anonymous User Searches For Dealer With Directions", "Verify IndexPage");
 
         String indexPageURL = indexPage.getAssertUrl();
         Assert.assertEquals(indexPageURL, UrlOfPages.indexPage);

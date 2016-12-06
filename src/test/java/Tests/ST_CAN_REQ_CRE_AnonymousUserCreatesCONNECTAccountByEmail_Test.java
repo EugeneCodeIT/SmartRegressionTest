@@ -50,7 +50,7 @@ public class ST_CAN_REQ_CRE_AnonymousUserCreatesCONNECTAccountByEmail_Test exten
         hotmailPage.deleteMails();
 
         driver.get(UrlOfPages.indexPage);
-        test = extent.startTest("Anonymous user creates CONNECT account by e-mail","Verify Anonymous user creates CONNECT account by e-mail");
+        test = extent.startTest(BasePage.Data()+" Anonymous user creates CONNECT account by e-mail","Verify Anonymous user creates CONNECT account by e-mail");
 
         String indexPageURL = indexPage.getAssertUrl();
         Assert.assertEquals(indexPageURL, UrlOfPages.indexPage);

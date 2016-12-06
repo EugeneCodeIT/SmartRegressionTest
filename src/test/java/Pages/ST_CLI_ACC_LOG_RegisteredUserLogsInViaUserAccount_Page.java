@@ -203,6 +203,7 @@ public class ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccount_Page extends Base
             } catch (IOException|Exception|NoSuchElementException e) {
                 System.out.println("Captcha is wrong");
                 countOperations++;
+                passwordField.clear();
                 passwordField.sendKeys("Testen123");
                 continue;
             }

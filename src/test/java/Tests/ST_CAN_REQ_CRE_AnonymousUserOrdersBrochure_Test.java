@@ -36,7 +36,7 @@ public class ST_CAN_REQ_CRE_AnonymousUserOrdersBrochure_Test extends BaseTest{
         extent.addSystemInfo("Resolution",basePage.getWindowHeight() +"X"+ basePage.getWindowWidth());
 
         driver.get(UrlOfPages.broschüre_bestellen);
-        test = extent.startTest("Broschüre Bestellen", "Verify broschüre bestellen");
+        test = extent.startTest(BasePage.Data()+" Broschüre Bestellen", "Verify broschüre bestellen");
 
         String broschüreBestellenURL = st_can_req_cre_anonymousUserOrdersBrochure_page.getAssertUrl();
         Assert.assertEquals(broschüreBestellenURL, UrlOfPages.broschüre_bestellen);
@@ -100,7 +100,7 @@ public class ST_CAN_REQ_CRE_AnonymousUserOrdersBrochure_Test extends BaseTest{
     @Test(groups = {"ST_CAN_REQ_CRE_AnonymousUserOrdersBrochure_Test"})
     public void testSelectBroschüreBestellenFromSideNavigator() {
         driver.get(UrlOfPages.indexPage);
-        test = extent.startTest("Select Broschüre Bestellen From Side Navigator", "Verify broschüre bestellen");
+        test = extent.startTest(BasePage.Data()+" Select Broschüre Bestellen From Side Navigator", "Verify broschüre bestellen");
 
         String indexPageURL = indexPage.getAssertUrl();
         Assert.assertEquals(indexPageURL, UrlOfPages.indexPage);
@@ -167,7 +167,7 @@ public class ST_CAN_REQ_CRE_AnonymousUserOrdersBrochure_Test extends BaseTest{
     @Test(groups = {"ST_CAN_REQ_CRE_AnonymousUserOrdersBrochure_Test"})
     public void testSelectBroschüreAndFillForm() {
         driver.get(UrlOfPages.indexPage);
-        test = extent.startTest("Select Broschüre And FillForm", "Verify broschüre bestellen");
+        test = extent.startTest(BasePage.Data()+" Select Broschüre And FillForm", "Verify broschüre bestellen");
 
         String indexPageURL = indexPage.getAssertUrl();
         Assert.assertEquals(indexPageURL, UrlOfPages.indexPage);
