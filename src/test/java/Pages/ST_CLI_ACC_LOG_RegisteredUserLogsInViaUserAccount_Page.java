@@ -52,7 +52,7 @@ public class ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccount_Page extends Base
     @FindBy(xpath = "//div[@class='secondary-bar action-bar']/ul/li/div/a[@class='nav-title nav-title-login e-copytext6' or @class='nav-title nav-title-login e-copytext6 nav-title-active' and contains(@href,'#')]")
     private WebElement connectTestButton;
 
-    @FindBy(xpath = "//div[@class='secondary-bar action-bar']/ul/li/div/div/div/div[@class='login-form']")
+    @FindBy(xpath = "//div[@class='secondary-bar action-bar']//div[@class='login-form']")
     private WebElement loginForm;
 
     @FindBy(xpath = "//img[@alt='smart ambient UK']")

@@ -104,6 +104,9 @@ public class IndexPage extends BasePage {
     @FindBy(xpath = "//li[@class='nav-item action-nav-item login-nav-item vp12']/div/div/div/div/div[@class='login-nav-headline']")
     private WebElement logoutPersonalizationButton;
 
+    @FindBy(xpath = "//div[@class='secondary-bar action-bar']//div[@class='login-form']")
+    private WebElement loginForm;
+
     public IndexPage(WebDriver driver) {
         super(driver);
     }

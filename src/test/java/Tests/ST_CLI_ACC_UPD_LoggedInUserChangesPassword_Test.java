@@ -73,7 +73,7 @@ public class ST_CLI_ACC_UPD_LoggedInUserChangesPassword_Test extends BaseTest{
         test.log(LogStatus.INFO, "User is logged out successfully");
     }
 
-    @Test(priority=2, groups = {"ST_CLI_ACC_UPD_LoggedInUserChangesPassword_Test"})
+    @Test(priority = 2, groups = {"ST_CLI_ACC_UPD_LoggedInUserChangesPassword_Test"})
     public void testLoginByChangedPassword() throws InterruptedException {
         extent.addSystemInfo("Resolution", basePage.getWindowHeight() + "X" + basePage.getWindowWidth());
 
@@ -132,6 +132,17 @@ public class ST_CLI_ACC_UPD_LoggedInUserChangesPassword_Test extends BaseTest{
         String connectButtonName = indexPage.getConnectButtonName();
         Assert.assertEquals(connectButtonName, "Connect");
         test.log(LogStatus.INFO, "User is logged out successfully");
+    }
+
+    @Test(priority = 4, groups = {"ST_CLI_ACC_UPD_LoggedInUserChangesPassword_Test"})
+    public void testLoginByChangedBackPassword() throws InterruptedException {
+        extent.addSystemInfo("Resolution", basePage.getWindowHeight() + "X" + basePage.getWindowWidth());
+
+        driver.get(UrlOfPages.indexPage);
+        test = extent.startTest("ST_CLI_ACC_UPD Login By changed back Password", "Verify Login By changed back Password");
+        test.log(LogStatus.INFO, basePage.getBrowserName() + basePage.getBrowserVersion());
+
+        indexPage.closeCookiesPopUp();
 
         indexPage.connectbuttonClick();
 
@@ -141,8 +152,7 @@ public class ST_CLI_ACC_UPD_LoggedInUserChangesPassword_Test extends BaseTest{
         st_cli_acc_log_RegisteredUserLogsInViaUserAccount_page.passwordField("Testen123");
         st_cli_acc_log_RegisteredUserLogsInViaUserAccount_page.submitButtonClick();
 
-        userName = indexPage.getUserName();
+        String userName = indexPage.getUserName();
         Assert.assertEquals(userName, "Test");
-        test.log(LogStatus.INFO, "User is logged in with changed back password successfully");
-    }
+        test.log(LogStatus.INFO, "User is logged in with changed back password successfully");}
 }
