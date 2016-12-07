@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="SuiteCLI">
+
+    <test name="RegressionCLI">
+        <groups>
+
+            <!-- In <run> you should write group name of tests which you don't want run -->
+
+            <run>
+                <exclude name="ST_CLI_ACC_OUT_LoggedInUserLogsOutViaConnectMenu_Test"/>
+                <exclude name="ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccountTest"/>
+                <exclude name="ST_CLI_ACC_UPD_LoggedInUserChangesPassword_Test"/>
+                <exclude name="ST_CLI_ACC_UPD_LoggedInUserChangesEmailAddress_Test"/>
+                <!--
+                <exclude name="ST_CLI_ACC_UPD_LoggedInUserChangesPersonalData_Test"/>
+                -->
+            </run>
+        </groups>
+
+        <!-- In <classes> you should add all created tests -->
+
+        <classes>
+            <class name="Tests.ST_CLI_ACC_UPD_LoggedInUserChangesEmailAddress_Test"/>
+            <class name="Tests.ST_CLI_ACC_UPD_LoggedInUserChangesPassword_Test"/>
+            <class name="Tests.ST_CLI_ACC_UPD_LoggedInUserChangesPersonalData_Test"/>
+            <class name="Tests.ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccountTest"/>
+            <class name="Tests.ST_CLI_ACC_OUT_LoggedInUserLogsOutViaConnectMenu_Test"/>
+        </classes>
+    </test>
+
+</suite>
