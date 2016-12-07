@@ -29,13 +29,6 @@ task chrometests(type: Test) {
     }
 }
 
-task firefoxtests(type: Test) {
-    systemProperty "driver", "firefox"
-    useTestNG() {
-        suites 'src/test/resources/suite.xml'
-    }
-}
-
 task chrometestsCLI(type: Test) {
     systemProperty "webdriver.chrome.driver","src/test/WebDrivers/chromedriver.exe"
     systemProperty "driver","chrome"
@@ -50,6 +43,27 @@ task chrometestsCAN(type: Test) {
     systemProperty "driver","chrome"
     systemProperty "file.encoding", "UTF-8"
     useTestNG(){
+        suites 'src/test/resources/suiteCLI.xml'
+    }
+}
+
+task firefoxtests(type: Test) {
+    systemProperty "driver", "firefox"
+    useTestNG() {
+        suites 'src/test/resources/suite.xml'
+    }
+}
+
+task firefoxTestsCAN(type: Test) {
+    systemProperty "driver", "firefox"
+    useTestNG() {
+        suites 'src/test/resources/suiteCAN.xml'
+    }
+}
+
+task firefoxTestsCLI(type: Test) {
+    systemProperty "driver", "firefox"
+    useTestNG() {
         suites 'src/test/resources/suiteCLI.xml'
     }
 }
