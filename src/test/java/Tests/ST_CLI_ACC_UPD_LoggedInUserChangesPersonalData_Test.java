@@ -30,7 +30,7 @@ public class ST_CLI_ACC_UPD_LoggedInUserChangesPersonalData_Test extends BaseTes
         extent.addSystemInfo("Resolution",basePage.getWindowHeight() +"X"+ basePage.getWindowWidth());
 
         driver.get(UrlOfPages.indexPage);
-        test = extent.startTest("ST_CLI_ACC_UPD Logged in user changes personal data", "Verify Logged in user changes personal data");
+        test = extent.startTest(BasePage.Data()+" ST_CLI_ACC_UPD Logged in user changes personal data", "Verify Logged in user changes personal data");
 
         String indexPageURL = indexPage.getAssertUrl();
         Assert.assertEquals(indexPageURL, UrlOfPages.indexPage);

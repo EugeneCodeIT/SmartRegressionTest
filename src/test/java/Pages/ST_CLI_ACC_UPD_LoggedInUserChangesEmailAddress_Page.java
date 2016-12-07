@@ -5,6 +5,8 @@ import org.openqa.selenium.interactions.internal.Coordinates;
 import org.openqa.selenium.internal.Locatable;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.ArrayList;
+
 public class ST_CLI_ACC_UPD_LoggedInUserChangesEmailAddress_Page extends BasePage {
 
     @FindBy(xpath = "//input[contains(@id,'email')]")
@@ -151,6 +153,12 @@ public class ST_CLI_ACC_UPD_LoggedInUserChangesEmailAddress_Page extends BasePag
         passwordField.sendKeys(pass);
         submitEmailButton.click();
         submitChangeEmailButton.click();
+        try{
+            waitVisibilityOfElement(emailField);
+        }catch (TimeoutException e){
+            System.out.println(e);
+        }
+
     }
 
     public void editPassword(String oldPassword, String newPassword){
@@ -168,9 +176,8 @@ public class ST_CLI_ACC_UPD_LoggedInUserChangesEmailAddress_Page extends BasePag
     }
 
     public void submitNewEmail(){
-        for (String winHandle : driver.getWindowHandles()) {
-            driver.switchTo().window(winHandle);
-        }
+        ArrayList<String> windowHandles = new ArrayList<String>(driver.getWindowHandles());
+        driver.switchTo().window(windowHandles.get(1));
         waitOfElement(submitChangeEmailButton);
         submitChangeEmailButton.click();
     }

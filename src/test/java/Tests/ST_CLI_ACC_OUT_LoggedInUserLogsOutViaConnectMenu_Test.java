@@ -39,7 +39,7 @@ public class ST_CLI_ACC_OUT_LoggedInUserLogsOutViaConnectMenu_Test extends BaseT
         extent.addSystemInfo("Resolution",basePage.getWindowHeight() +"X"+ basePage.getWindowWidth());
 
         driver.get(UrlOfPages.indexPage);
-        test = extent.startTest("Logged In User Logs Out Via Connect Menu", "Verify Logs Out Via Connect Menu");
+        test = extent.startTest(BasePage.Data()+" Logged In User Logs Out Via Connect Menu", "Verify Logs Out Via Connect Menu");
 
         String indexPageURL = indexPage.getAssertUrl();
         Assert.assertEquals(indexPageURL, UrlOfPages.indexPage);

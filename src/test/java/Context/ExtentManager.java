@@ -1,5 +1,6 @@
 package Context;
 
+import com.relevantcodes.extentreports.DisplayOrder;
 import com.relevantcodes.extentreports.ExtentReports;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -19,7 +20,7 @@ public class ExtentManager {
         ExtentReports extent;
         String Path = "./Report.html";
         System.out.println(Path);
-        extent = new ExtentReports(Path, false);
+        extent = new ExtentReports(Path, false, DisplayOrder.NEWEST_FIRST);
         extent.config()
                 .documentTitle("Automation Report")
                 .reportName("Regression");

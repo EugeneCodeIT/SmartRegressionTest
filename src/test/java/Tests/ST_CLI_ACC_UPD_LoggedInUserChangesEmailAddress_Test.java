@@ -27,7 +27,7 @@ public class ST_CLI_ACC_UPD_LoggedInUserChangesEmailAddress_Test extends BaseTes
 
     @Test(priority = 1, groups = {"ST_CLI_ACC_UPD_LoggedInUserChangesEmailAddress_Test"})
     public void testClearSmart_automater2MailBox(){
-        test = extent.startTest("ST_CLI_ACC_UPD Logged in user changes e-mail address", "Verify Logged in user changes e-mail address");
+        test = extent.startTest(BasePage.Data()+" ST_CLI_ACC_UPD Logged in user changes e-mail address", "Verify Logged in user changes e-mail address");
         test.log(LogStatus.INFO, basePage.getBrowserName() + basePage.getBrowserVersion());
 
         test.log(LogStatus.INFO, "Login to smart_automater2@outlook.com mail box");

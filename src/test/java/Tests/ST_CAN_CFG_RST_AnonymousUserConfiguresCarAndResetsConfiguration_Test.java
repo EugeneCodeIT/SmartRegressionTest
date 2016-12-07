@@ -32,7 +32,7 @@ public class ST_CAN_CFG_RST_AnonymousUserConfiguresCarAndResetsConfiguration_Tes
     public void testAnonymousUserConfiguresCarAndResetsConfiguration() throws InterruptedException {
         extent.addSystemInfo("Resolution",basePage.getWindowHeight()+"X"+basePage.getWindowWidth());
 
-        test = extent.startTest("Anonymous user configures car and resets configuration", "Verify Anonymous user configures car and resets configuration");
+        test = extent.startTest(BasePage.Data()+" Anonymous user configures car and resets configuration", "Verify Anonymous user configures car and resets configuration");
         driver.get(UrlOfPages.indexPage);
 
         String indexPageURL = indexPage.getAssertUrl();
