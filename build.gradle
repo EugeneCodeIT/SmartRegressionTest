@@ -35,3 +35,12 @@ task firefoxtests(type: Test) {
         suites 'src/test/resources/suite.xml'
     }
 }
+
+task chrometestsCAN(type: Test) {
+    systemProperty "webdriver.chrome.driver","src/test/WebDrivers/chromedriver.exe"
+    systemProperty "driver","chrome"
+    systemProperty "file.encoding", "UTF-8"
+    useTestNG(){
+        suites 'src/test/resources/suiteCAN.xml'
+    }
+}
