@@ -1,9 +1,6 @@
 package Pages;
 
-import org.openqa.selenium.Capabilities;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -41,9 +38,19 @@ public class BasePage {
     /**
      * Method moves mouse over element
      */
+    public void moveToElementAndClick(WebElement element){
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element).click().perform();
+    }
+
     public void moveToElement(WebElement element){
         Actions actions = new Actions(driver);
         actions.moveToElement(element).build().perform();
+    }
+
+    public void clickOnElemenByJS(WebElement element){
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("arguments[0].click();", element);
     }
 
     /**

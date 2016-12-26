@@ -1,6 +1,7 @@
 package Pages;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 
 public class HotmailPage extends BasePage {
@@ -47,6 +48,9 @@ public class HotmailPage extends BasePage {
     @FindBy(xpath = ".//*[@id='settings']")
     private WebElement settingMsnButton;
 
+    @FindBy(xpath = ".//span[contains(.,'Posteingang')]")
+    private WebElement posteingangButton;
+
     public HotmailPage(WebDriver driver) {
         super(driver);
     }
@@ -76,16 +80,30 @@ public class HotmailPage extends BasePage {
         int countOperations = 0;
         do{
             try{
-                moveToElement(headerOfMails);
-                waitOfElement(checkbox);
-                checkbox.click();
+                String name = System.getProperty("driver");
+                if (name.equals("chrome")){
+                    waitOfElement(posteingangButton);
+                    posteingangButton.click();
+                    if(driver.findElements(By.xpath("//span[contains(.,'Sie sind auf dem Laufenden')]")).size() != 0)break;
+                    waitVisibilityOfElement(headerOfMails);
+                    moveToElementAndClick(checkbox);
+                }
+                if (name.equals("firefox")){
+                    clickOnElemenByJS(posteingangButton);
+                    if(driver.findElements(By.xpath("//span[contains(.,'Sie sind auf dem Laufenden')]")).size() != 0)break;
+                    moveToElement(headerOfMails);
+                    waitOfElement(checkbox);
+                    clickOnElemenByJS(checkbox);
+                }
                 waitOfElement(deleteButton);
                 deleteButton.click();
+                if(driver.findElements(By.xpath("//span[contains(.,'Sie sind auf dem Laufenden')]")).size() != 0)break;
             }catch ( TimeoutException | NoSuchElementException e){
                 System.out.println(e);
                 countOperations++;
                 driver.navigate().refresh();
-                if(driver.findElements(By.xpath("//span[contains(.,'Wählen Sie ein zu lesendes Element aus.')]")).size() != 0)break;
+                posteingangButton.click();
+                if(driver.findElements(By.xpath("//span[contains(.,'Sie sind auf dem Laufenden')]")).size() != 0)break;
                 continue;
             }
             break;
@@ -97,7 +115,7 @@ public class HotmailPage extends BasePage {
         do{
             try {
                 waitOfElement(confirmationEmail);
-                moveToElement(confirmationEmail);
+                moveToElementAndClick(confirmationEmail);
                 confirmationEmail.click();
             }catch (TimeoutException e){
                 System.out.println("Email doesn't display");
@@ -110,13 +128,15 @@ public class HotmailPage extends BasePage {
         }while (countOperations < 3);
     }
 
-    public void clickOnChangeEmail(){
+    public void clickOnChangeEmail() throws InterruptedException {
+        Thread.sleep(3000);
         int countOperations = 0;
         do{
             try {
                 waitOfElement(changeEmail);
-                moveToElement(changeEmail);
-                changeEmail.click();
+                clickOnElemenByJS(posteingangButton);
+                clickOnElemenByJS(changeEmail);
+                waitOfElement(changeEmailVerificationLink);
             }catch (TimeoutException e){
                 System.out.println("Email doesn't display");
                 countOperations++;
@@ -133,7 +153,18 @@ public class HotmailPage extends BasePage {
     }
 
     public void clickOnChangeEmailVerificationLink(){
-        waitOfElement(changeEmailVerificationLink);
+        int countOperations = 0;
+        do {
+            try{
+                waitOfElement(changeEmailVerificationLink);
+            }catch (TimeoutException e){
+                System.out.println("Link doesn't display");
+                countOperations++;
+                driver.navigate().refresh();
+                continue;
+            }
+            break;
+        }while (countOperations < 3);
         changeEmailVerificationLink.click();
     }
 
@@ -147,7 +178,7 @@ public class HotmailPage extends BasePage {
 
     public void logOutFromMail(){
         waitOfElement(menuButton);
-        moveToElement(menuButton);
+        moveToElementAndClick(menuButton);
         menuButton.click();
         waitOfElement(logOutButton);
         waitVisibilityOfElement(logOutButton);

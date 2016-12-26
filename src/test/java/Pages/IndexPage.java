@@ -2,6 +2,8 @@ package Pages;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class IndexPage extends BasePage {
 
@@ -107,6 +109,13 @@ public class IndexPage extends BasePage {
     @FindBy(xpath = "//div[@class='secondary-bar action-bar']//div[@class='login-form']")
     private WebElement loginForm;
 
+    @FindBy(xpath = "//div[@class='secondary-bar action-bar']//a[@href='/de/de/index/personalization/profile-page.html']")
+    private WebElement profileButton;
+
+    @FindBy(xpath = "//a[@class='nav-title nav-title-search e-copytext6']")
+    private WebElement search;
+
+
     public IndexPage(WebDriver driver) {
         super(driver);
     }
@@ -127,19 +136,18 @@ public class IndexPage extends BasePage {
      */
     public void closeCookiesPopUp(){
         try{
-            //waitOfElement(closeCookiesPopup);
-            closeCookiesPopup.click();
-        }catch (NoSuchElementException e){
+            waitVisibilityOfElement(closeCookiesPopup);
+            clickOnElemenByJS(closeCookiesPopup);
+        }catch (TimeoutException | NoSuchElementException e){
             System.out.println("Cookies popup is absent");
         }
-
     }
 
     /**
      * Method moves mouse over Broschüre button then click on it
      */
     public void brochureOrderClick() {
-        moveToElement(imageOfMenuOrderButton);
+        moveToElementAndClick(imageOfMenuOrderButton);
         brochureOrderMenuButton.click();
         waitOfElement(submitButton);
     }
@@ -148,7 +156,7 @@ public class IndexPage extends BasePage {
      * Method moves mouse over Händlersuche button then click on it
      */
     public void dealerLocatorClick() throws InterruptedException {
-        moveToElement(imageOfMenuDealerLocator);
+        moveToElementAndClick(imageOfMenuDealerLocator);
         imageOfMenuDealerLocator.click();
         waitVisibilityOfElement(dealerSearchButton);
         Thread.sleep(1000);
@@ -223,15 +231,19 @@ public class IndexPage extends BasePage {
         do {
             try{
                 waitOfElement(connectButton);
-            }catch (TimeoutException e){
+                moveToElement(connectButton);
+                clickOnElemenByJS(connectButton);
+            }catch (TimeoutException | NoSuchElementException | ElementNotVisibleException e){
                 driver.navigate().refresh();
-                System.out.println("Index page: 225 string");
+                moveToElement(search);
+                System.out.println("Index page: 229 string");
                 count++;
                 continue;
             }
             break;
         }while (count < 3);
-        moveToElement(connectButton);
+        //moveToElement(connectButton);
+        //clickOnElemenByJS(connectButton);
     }
 
     public void hoverConnectButton() throws InterruptedException {
@@ -242,6 +254,8 @@ public class IndexPage extends BasePage {
                 String connect = driver.findElement(By.xpath("//div[@class='secondary-bar action-bar']/ul/li/div/a[@class='nav-title nav-title-login e-copytext6' or @class='nav-title nav-title-login e-copytext6 nav-title-active' and contains(@href,'#')]")).getAttribute("class");
                 System.out.println(connect);
                 WebElement connectButton = driver.findElement(By.xpath("//div[@class='secondary-bar action-bar']/ul/li/div/a[@class='"+connect+"' and contains(@href,'#')]"));
+                WebDriverWait wait = new WebDriverWait(driver,15);
+                wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='secondary-bar action-bar']/ul/li/div/a[@class='"+connect+"' and contains(@href,'#')]")));
                 connectButton.isDisplayed();
             }catch (StaleElementReferenceException | NoSuchElementException e){
                 driver.navigate().refresh();
@@ -254,7 +268,7 @@ public class IndexPage extends BasePage {
 
         do {
             try{
-                moveToElement(connectTestButton);
+                moveToElementAndClick(connectTestButton);
                 logoutPersonalizationButton.isDisplayed();
             }catch (NoSuchElementException e){
                 System.out.println("Menu isn't opened page will be reloaded");
@@ -284,11 +298,19 @@ public class IndexPage extends BasePage {
 
     public String UserName() throws InterruptedException {
         Thread.sleep(2000);
-        try{
-            waitOfElement(userTestName);
-        }catch (TimeoutException e){
-            System.out.println("user name is wrong page will be reloaded");
-        }
+        int count = 0;
+        do {
+            try{
+                waitOfElement(userTestName);
+            }catch (TimeoutException e){
+                System.out.println("user name is wrong page will be reloaded");
+                count ++;
+                driver.navigate().refresh();
+                continue;
+            }
+            break;
+        }while (count < 3);
+
         return connectTestButton.getText();
     }
 
@@ -297,12 +319,12 @@ public class IndexPage extends BasePage {
     }
 
     public void smartFortwobuttonClick() {
-        moveToElement(smartFortwoButton);
+        moveToElementAndClick(smartFortwoButton);
     }
 
     public void smartFortwoCabrioButtonClick() throws InterruptedException {
         Thread.sleep(2000);
-        moveToElement(smartFortwoCabrioButton);
+        moveToElementAndClick(smartFortwoCabrioButton);
     }
 
     public void konfiguratorButtonClick(){
