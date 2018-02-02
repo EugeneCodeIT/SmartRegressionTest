@@ -4,6 +4,8 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.internal.Coordinates;
 import org.openqa.selenium.internal.Locatable;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.ArrayList;
 
@@ -154,7 +156,8 @@ public class ST_CLI_ACC_UPD_LoggedInUserChangesEmailAddress_Page extends BasePag
         submitEmailButton.click();
         submitChangeEmailButton.click();
         try{
-            waitVisibilityOfElement(emailField);
+            WebDriverWait wait = new WebDriverWait(driver,15);
+            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[contains(@id,'email')]")));
         }catch (TimeoutException e){
             System.out.println(e);
         }

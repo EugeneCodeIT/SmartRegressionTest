@@ -2,7 +2,6 @@ package Tests;
 
 import Context.ExtentManager;
 import Pages.BasePage;
-import com.relevantcodes.extentreports.DisplayOrder;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -16,10 +15,12 @@ public class BaseTest {
     protected WebDriver driver;
     protected ExtentReports extent;
     protected ExtentTest test;
+    BasePage basePage;
 
     @AfterMethod
     protected void afterMethod(ITestResult result){
         if (result.getStatus() == ITestResult.FAILURE) {
+            test.log(LogStatus.FAIL, test.addScreenCapture(ExtentManager.CaptureScreen(driver,"./images/"+ basePage.random())));
             test.log(LogStatus.FAIL, result.getThrowable());
         } else if (result.getStatus() == ITestResult.SKIP) {
             test.log(LogStatus.SKIP, "Test skipped " + result.getThrowable());
@@ -35,6 +36,7 @@ public class BaseTest {
     @BeforeClass
     public void M1(){
         extent = ExtentManager.Instance();
+        basePage = new BasePage(driver);
     }
     @AfterClass
     public void tear() throws Exception {

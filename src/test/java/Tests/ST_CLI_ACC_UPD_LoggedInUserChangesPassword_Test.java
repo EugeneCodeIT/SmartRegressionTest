@@ -2,6 +2,7 @@ package Tests;
 
 
 import Constants.UrlOfPages;
+import Context.ExtentManager;
 import Context.MyDriverFactory;
 import Pages.*;
 import com.relevantcodes.extentreports.LogStatus;
@@ -49,6 +50,7 @@ public class ST_CLI_ACC_UPD_LoggedInUserChangesPassword_Test extends BaseTest{
         st_cli_acc_log_RegisteredUserLogsInViaUserAccount_page.emailField("tg_tester@outlook.de");
         st_cli_acc_log_RegisteredUserLogsInViaUserAccount_page.passwordField("Testen123");
         st_cli_acc_log_RegisteredUserLogsInViaUserAccount_page.submitButtonClick();
+        test.log(LogStatus.INFO, test.addScreenCapture(ExtentManager.CaptureScreen(driver,"./images/"+ basePage.random())));
 
         String userName = indexPage.UserName();
         Assert.assertEquals(userName, "Test");
@@ -90,6 +92,7 @@ public class ST_CLI_ACC_UPD_LoggedInUserChangesPassword_Test extends BaseTest{
         st_cli_acc_log_RegisteredUserLogsInViaUserAccount_page.emailField("tg_tester@outlook.de");
         st_cli_acc_log_RegisteredUserLogsInViaUserAccount_page.passwordField("Testen123#");
         st_cli_acc_log_RegisteredUserLogsInViaUserAccount_page.submitButtonClick();
+        test.log(LogStatus.INFO, test.addScreenCapture(ExtentManager.CaptureScreen(driver,"./images/"+ basePage.random())));
 
         String userName = indexPage.getUserName();
         Assert.assertEquals(userName, "Test");
@@ -110,6 +113,7 @@ public class ST_CLI_ACC_UPD_LoggedInUserChangesPassword_Test extends BaseTest{
         st_cli_acc_log_RegisteredUserLogsInViaUserAccount_page.emailField("tg_tester@outlook.de");
         st_cli_acc_log_RegisteredUserLogsInViaUserAccount_page.passwordField("Testen123#");
         st_cli_acc_log_RegisteredUserLogsInViaUserAccount_page.submitButtonClick();
+        test.log(LogStatus.INFO, test.addScreenCapture(ExtentManager.CaptureScreen(driver,"./images/"+ basePage.random())));
 
         String userName = indexPage.getUserName();
         Assert.assertEquals(userName, "Test");
@@ -151,6 +155,7 @@ public class ST_CLI_ACC_UPD_LoggedInUserChangesPassword_Test extends BaseTest{
         st_cli_acc_log_RegisteredUserLogsInViaUserAccount_page.emailField("tg_tester@outlook.de");
         st_cli_acc_log_RegisteredUserLogsInViaUserAccount_page.passwordField("Testen123");
         st_cli_acc_log_RegisteredUserLogsInViaUserAccount_page.submitButtonClick();
+        test.log(LogStatus.INFO, test.addScreenCapture(ExtentManager.CaptureScreen(driver,"./images/"+ basePage.random())));
 
         String userName = indexPage.getUserName();
         Assert.assertEquals(userName, "Test");

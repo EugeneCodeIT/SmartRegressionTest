@@ -8,7 +8,6 @@ import org.openqa.selenium.support.FindBy;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.*;
-import java.sql.Time;
 
 public class ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccount_Page extends BasePage {
     IndexPage indexPage;
@@ -31,7 +30,7 @@ public class ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccount_Page extends Base
     @FindBy(xpath = "//div[@class='secondary-bar action-bar']/ul/li[2]/div/div/div/div/ul/li[5]/a[@href='/de/de/index/personalization/profile-page/_jcr_content/header.logout.html']")
     private WebElement logoutPersonalizationButton;
 
-    @FindBy(xpath = "//div[@class='secondary-bar action-bar']/ul/li[2]/div/div/div/div/ul/li/a[@href='/de/de/index/personalization/profile-page.html']")
+    @FindBy(xpath = "//div[@class='secondary-bar action-bar']//a[@href='/de/de/index/personalization/profile-page.html']")
     private WebElement profileButton;
 
     @FindBy(xpath = "//div[@class='secondary-bar action-bar']/ul/li[2]/div/a/span[@class='nav-title-text' and contains(.,'Connect')]")
@@ -57,6 +56,12 @@ public class ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccount_Page extends Base
 
     @FindBy(xpath = "//img[@alt='smart ambient UK']")
     private WebElement img;
+
+    @FindBy(xpath = "//a[@class='nav-title nav-title-search e-copytext6']")
+    private WebElement search;
+
+    @FindBy(xpath = "//div[@class='secondary-bar action-bar']//span[@class='nav-title-text' and contains(.,'TEST')]")
+    private WebElement loggedInName;
 
     public ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccount_Page(WebDriver driver) {
         super(driver);
@@ -85,6 +90,10 @@ public class ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccount_Page extends Base
         submitButton.click();
     }
 
+    public void waitNameInConnectButton(){
+        waitOfElement(loggedInName);
+    }
+
     public void rememberMeCheckCheckbox(){
         waitVisibilityOfElement(rememberMeCheckbox);
         rememberMeCheckbox.click();
@@ -93,7 +102,7 @@ public class ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccount_Page extends Base
     public void logoutButtonClick() throws InterruptedException {
         waitOfElement(logoutButton);
         logoutButton.click();
-        moveToElement(connectButton);
+        moveToElementAndClick(connectButton);
         waitOfElement(connectButtonContainsConnect);
     }
 
@@ -107,37 +116,39 @@ public class ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccount_Page extends Base
                 count++;
                 driver.navigate().refresh();
                 waitOfElement(connectTestButton);
-                moveToElement(img);
-                moveToElement(connectTestButton);
+                moveToElementAndClick(img);
+                moveToElementAndClick(connectTestButton);
                 continue;
             }
             break;
         }while (count < 3);
         logoutPersonalizationButton.click();
-        moveToElement(connectButton);
+        moveToElementAndClick(connectButton);
         waitOfElement(connectButtonContainsConnect);
     }
 
-    public void profileButtonClick(){
+    public void profileButtonClick() throws InterruptedException {
         int count = 0;
         do {
             try{
-                waitOfElement(profileButton);
-            }catch (TimeoutException e){
+                waitVisibilityOfElement(profileButton);
+                clickOnElemenByJS(profileButton);
+            }catch (NoSuchElementException | TimeoutException e){
                 System.out.println("profile button is absent");
                 count++;
                 driver.navigate().refresh();
+                moveToElement(search);
                 moveToElement(connectTestButton);
+                clickOnElemenByJS(connectTestButton);
                 continue;
             }
             break;
         }while (count < 3);
-        profileButton.click();
     }
 
     public void switchToFrame() throws InterruptedException {
         int count = 0;
-        moveToElement(connectTestButton);
+        moveToElementAndClick(connectTestButton);
         do {
             try{
                 driver.switchTo().frame(driver.findElement(By.xpath(".//*[@id='framelogin']")));
@@ -146,11 +157,8 @@ public class ST_CLI_ACC_LOG_RegisteredUserLogsInViaUserAccount_Page extends Base
                 count++;
                 driver.navigate().refresh();
                 Thread.sleep(3000);
-                String coonect = driver.findElement(By.xpath("//div[@class='secondary-bar action-bar']/ul/li/div/a[@class='nav-title nav-title-login e-copytext6' or @class='nav-title nav-title-login e-copytext6 nav-title-active' and contains(@href,'#')]")).getAttribute("class");
-                WebElement connectButton = driver.findElement(By.xpath("//div[@class='secondary-bar action-bar']/ul/li/div/a[@class='"+coonect+"' and contains(@href,'#')]"));
-                System.out.println(connectButton);
-                waitOfElement(connectButton);
-                moveToElement(connectButton);
+                waitVisibilityOfElement(connectTestButton);
+                moveToElementAndClick(connectTestButton);
                 continue;
             }
             break;
